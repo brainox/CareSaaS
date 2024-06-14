@@ -20,6 +20,9 @@
 		9BADAA072C1CDD4800250B7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BADAA0A2C1CDD4800250B7C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9BADAA132C1CE79400250B7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9BADAA1C2C1CEDBE00250B7C /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Bold.ttf"; path = "TempFonts/Nunito,Roboto/Nunito/static/Nunito-Bold.ttf"; sourceTree = SOURCE_ROOT; };
+		9BADAA1D2C1CEE3200250B7C /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-SemiBold.ttf"; path = "TempFonts/Nunito,Roboto/Nunito/static/Nunito-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
+		9BADAA1E2C1CEE6900250B7C /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "TempFonts/Nunito,Roboto/Roboto/Roboto-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +55,15 @@
 		9BADAA022C1CDD4700250B7C /* CareSaaS */ = {
 			isa = PBXGroup;
 			children = (
+				9BADAA172C1CEAA800250B7C /* App */,
+				9BADAA142C1CEA2900250B7C /* Views */,
+				9BADAA162C1CEA3F00250B7C /* ViewModels */,
+				9BADAA182C1CEAB800250B7C /* Models */,
+				9BADAA192C1CEAC500250B7C /* Resources */,
+				9BADAA202C1CF05D00250B7C /* Utils */,
+				9BADAA242C1CF3C100250B7C /* Managers */,
+				9BADAA252C1CF3DF00250B7C /* Persistence */,
 				9BADAA132C1CE79400250B7C /* Info.plist */,
-				9BADAA032C1CDD4700250B7C /* CareSaaSApp.swift */,
-				9BADAA052C1CDD4700250B7C /* ContentView.swift */,
-				9BADAA072C1CDD4800250B7C /* Assets.xcassets */,
 				9BADAA092C1CDD4800250B7C /* Preview Content */,
 			);
 			path = CareSaaS;
@@ -67,6 +75,108 @@
 				9BADAA0A2C1CDD4800250B7C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9BADAA142C1CEA2900250B7C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA052C1CDD4700250B7C /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9BADAA162C1CEA3F00250B7C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9BADAA172C1CEAA800250B7C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA032C1CDD4700250B7C /* CareSaaSApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		9BADAA182C1CEAB800250B7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9BADAA192C1CEAC500250B7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA1B2C1CEBAA00250B7C /* Fonts */,
+				9BADAA072C1CDD4800250B7C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9BADAA1A2C1CEAD300250B7C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA262C1CF50200250B7C /* View+Extensions */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9BADAA1B2C1CEBAA00250B7C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA1C2C1CEDBE00250B7C /* Nunito-Bold.ttf */,
+				9BADAA1D2C1CEE3200250B7C /* Nunito-SemiBold.ttf */,
+				9BADAA1E2C1CEE6900250B7C /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9BADAA202C1CF05D00250B7C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA1A2C1CEAD300250B7C /* Extensions */,
+				9BADAA222C1CF25400250B7C /* Styling */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9BADAA222C1CF25400250B7C /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA232C1CF36C00250B7C /* ThemeManager */,
+			);
+			path = Styling;
+			sourceTree = "<group>";
+		};
+		9BADAA232C1CF36C00250B7C /* ThemeManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThemeManager;
+			sourceTree = "<group>";
+		};
+		9BADAA242C1CF3C100250B7C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9BADAA252C1CF3DF00250B7C /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		9BADAA262C1CF50200250B7C /* View+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View+Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

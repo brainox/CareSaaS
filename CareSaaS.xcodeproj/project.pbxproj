@@ -11,6 +11,12 @@
 		9BADAA062C1CDD4700250B7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA052C1CDD4700250B7C /* ContentView.swift */; };
 		9BADAA082C1CDD4800250B7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BADAA072C1CDD4800250B7C /* Assets.xcassets */; };
 		9BADAA0B2C1CDD4800250B7C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BADAA0A2C1CDD4800250B7C /* Preview Assets.xcassets */; };
+		9BADAA282C1CFF2900250B7C /* TextTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA272C1CFF2900250B7C /* TextTheme.swift */; };
+		9BADAA2C2C1CFF5700250B7C /* TextTheme+CareSaaS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA2B2C1CFF5700250B7C /* TextTheme+CareSaaS.swift */; };
+		9BADAA2E2C1CFF6B00250B7C /* TextThemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA2D2C1CFF6B00250B7C /* TextThemeModifier.swift */; };
+		9BADAA3A2C1D0E8E00250B7C /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA392C1D0E8E00250B7C /* FontSize.swift */; };
+		9BADAA3D2C1D5EC000250B7C /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA3C2C1D5EC000250B7C /* AppFonts.swift */; };
+		9BADAA3F2C1D605B00250B7C /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA3E2C1D605B00250B7C /* Font+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,12 @@
 		9BADAA1C2C1CEDBE00250B7C /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-Bold.ttf"; path = "TempFonts/Nunito,Roboto/Nunito/static/Nunito-Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		9BADAA1D2C1CEE3200250B7C /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nunito-SemiBold.ttf"; path = "TempFonts/Nunito,Roboto/Nunito/static/Nunito-SemiBold.ttf"; sourceTree = SOURCE_ROOT; };
 		9BADAA1E2C1CEE6900250B7C /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "TempFonts/Nunito,Roboto/Roboto/Roboto-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		9BADAA272C1CFF2900250B7C /* TextTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTheme.swift; sourceTree = "<group>"; };
+		9BADAA2B2C1CFF5700250B7C /* TextTheme+CareSaaS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextTheme+CareSaaS.swift"; sourceTree = "<group>"; };
+		9BADAA2D2C1CFF6B00250B7C /* TextThemeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextThemeModifier.swift; sourceTree = "<group>"; };
+		9BADAA392C1D0E8E00250B7C /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
+		9BADAA3C2C1D5EC000250B7C /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
+		9BADAA3E2C1D605B00250B7C /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				9BADAA262C1CF50200250B7C /* View+Extensions */,
+				9BADAA3E2C1D605B00250B7C /* Font+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -137,25 +150,21 @@
 		9BADAA202C1CF05D00250B7C /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9BADAA2F2C1D028100250B7C /* Styling */,
 				9BADAA1A2C1CEAD300250B7C /* Extensions */,
-				9BADAA222C1CF25400250B7C /* Styling */,
+				9BADAA222C1CF25400250B7C /* Themes */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		9BADAA222C1CF25400250B7C /* Styling */ = {
+		9BADAA222C1CF25400250B7C /* Themes */ = {
 			isa = PBXGroup;
 			children = (
-				9BADAA232C1CF36C00250B7C /* ThemeManager */,
+				9BADAA272C1CFF2900250B7C /* TextTheme.swift */,
+				9BADAA2B2C1CFF5700250B7C /* TextTheme+CareSaaS.swift */,
+				9BADAA2D2C1CFF6B00250B7C /* TextThemeModifier.swift */,
 			);
-			path = Styling;
-			sourceTree = "<group>";
-		};
-		9BADAA232C1CF36C00250B7C /* ThemeManager */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThemeManager;
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		9BADAA242C1CF3C100250B7C /* Managers */ = {
@@ -177,6 +186,23 @@
 			children = (
 			);
 			path = "View+Extensions";
+			sourceTree = "<group>";
+		};
+		9BADAA2F2C1D028100250B7C /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA3B2C1D5E4300250B7C /* Fonts */,
+			);
+			path = Styling;
+			sourceTree = "<group>";
+		};
+		9BADAA3B2C1D5E4300250B7C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA3C2C1D5EC000250B7C /* AppFonts.swift */,
+				9BADAA392C1D0E8E00250B7C /* FontSize.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +275,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BADAA3F2C1D605B00250B7C /* Font+Extensions.swift in Sources */,
 				9BADAA062C1CDD4700250B7C /* ContentView.swift in Sources */,
+				9BADAA2C2C1CFF5700250B7C /* TextTheme+CareSaaS.swift in Sources */,
 				9BADAA042C1CDD4700250B7C /* CareSaaSApp.swift in Sources */,
+				9BADAA3D2C1D5EC000250B7C /* AppFonts.swift in Sources */,
+				9BADAA282C1CFF2900250B7C /* TextTheme.swift in Sources */,
+				9BADAA2E2C1CFF6B00250B7C /* TextThemeModifier.swift in Sources */,
+				9BADAA3A2C1D0E8E00250B7C /* FontSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

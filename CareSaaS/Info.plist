@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CareSaaS/Resources/Fonts/Nunito-Bold.ttf</string>
+		<string>CareSaaS/Resources/Fonts/Nunito-SemiBold.ttf</string>
+		<string>CareSaaS/Resources/Fonts/Roboto-Regular.ttf</string>
+	</array>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>

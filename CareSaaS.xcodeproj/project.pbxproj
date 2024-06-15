@@ -17,6 +17,15 @@
 		9BADAA3A2C1D0E8E00250B7C /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA392C1D0E8E00250B7C /* FontSize.swift */; };
 		9BADAA3D2C1D5EC000250B7C /* AppFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA3C2C1D5EC000250B7C /* AppFonts.swift */; };
 		9BADAA3F2C1D605B00250B7C /* Font+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA3E2C1D605B00250B7C /* Font+Extensions.swift */; };
+		9BADAA412C1DA4D200250B7C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA402C1DA4D200250B7C /* LoginView.swift */; };
+		9BADAA442C1DA87700250B7C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA432C1DA87700250B7C /* LoginViewModel.swift */; };
+		9BADAA462C1DA9EF00250B7C /* View+TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA452C1DA9EF00250B7C /* View+TextStyle.swift */; };
+		9BADAA482C1DE00000250B7C /* AttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA472C1DE00000250B7C /* AttributedString+Extensions.swift */; };
+		9BADAA4C2C1DE6AF00250B7C /* BorderTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA4B2C1DE6AF00250B7C /* BorderTextFieldModifier.swift */; };
+		9BADAA4E2C1DE6F700250B7C /* TextFieldState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA4D2C1DE6F700250B7C /* TextFieldState.swift */; };
+		9BADAA502C1DE73700250B7C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA4F2C1DE73700250B7C /* View+Extensions.swift */; };
+		9BADAA522C1DE79A00250B7C /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA512C1DE79A00250B7C /* CheckboxToggleStyle.swift */; };
+		9BADAA562C1E1D3E00250B7C /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA552C1E1D3E00250B7C /* InputField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +44,15 @@
 		9BADAA392C1D0E8E00250B7C /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		9BADAA3C2C1D5EC000250B7C /* AppFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFonts.swift; sourceTree = "<group>"; };
 		9BADAA3E2C1D605B00250B7C /* Font+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extensions.swift"; sourceTree = "<group>"; };
+		9BADAA402C1DA4D200250B7C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9BADAA432C1DA87700250B7C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9BADAA452C1DA9EF00250B7C /* View+TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+TextStyle.swift"; sourceTree = "<group>"; };
+		9BADAA472C1DE00000250B7C /* AttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+Extensions.swift"; sourceTree = "<group>"; };
+		9BADAA4B2C1DE6AF00250B7C /* BorderTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderTextFieldModifier.swift; sourceTree = "<group>"; };
+		9BADAA4D2C1DE6F700250B7C /* TextFieldState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldState.swift; sourceTree = "<group>"; };
+		9BADAA4F2C1DE73700250B7C /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		9BADAA512C1DE79A00250B7C /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
+		9BADAA552C1E1D3E00250B7C /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,13 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				9BADAA172C1CEAA800250B7C /* App */,
-				9BADAA142C1CEA2900250B7C /* Views */,
-				9BADAA162C1CEA3F00250B7C /* ViewModels */,
-				9BADAA182C1CEAB800250B7C /* Models */,
-				9BADAA192C1CEAC500250B7C /* Resources */,
-				9BADAA202C1CF05D00250B7C /* Utils */,
 				9BADAA242C1CF3C100250B7C /* Managers */,
-				9BADAA252C1CF3DF00250B7C /* Persistence */,
+				9BADAA142C1CEA2900250B7C /* Views */,
+				9BADAA182C1CEAB800250B7C /* Models */,
+				9BADAA492C1DE65700250B7C /* Common */,
+				9BADAA202C1CF05D00250B7C /* Utils */,
+				9BADAA192C1CEAC500250B7C /* Resources */,
 				9BADAA132C1CE79400250B7C /* Info.plist */,
 				9BADAA092C1CDD4800250B7C /* Preview Content */,
 			);
@@ -92,16 +109,10 @@
 		9BADAA142C1CEA2900250B7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9BADAA422C1DA86000250B7C /* LoginView */,
 				9BADAA052C1CDD4700250B7C /* ContentView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9BADAA162C1CEA3F00250B7C /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		9BADAA172C1CEAA800250B7C /* App */ = {
@@ -133,6 +144,7 @@
 			children = (
 				9BADAA262C1CF50200250B7C /* View+Extensions */,
 				9BADAA3E2C1D605B00250B7C /* Font+Extensions.swift */,
+				9BADAA472C1DE00000250B7C /* AttributedString+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,16 +186,11 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		9BADAA252C1CF3DF00250B7C /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
 		9BADAA262C1CF50200250B7C /* View+Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9BADAA452C1DA9EF00250B7C /* View+TextStyle.swift */,
+				9BADAA4F2C1DE73700250B7C /* View+Extensions.swift */,
 			);
 			path = "View+Extensions";
 			sourceTree = "<group>";
@@ -203,6 +210,50 @@
 				9BADAA392C1D0E8E00250B7C /* FontSize.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9BADAA422C1DA86000250B7C /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA402C1DA4D200250B7C /* LoginView.swift */,
+				9BADAA432C1DA87700250B7C /* LoginViewModel.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		9BADAA492C1DE65700250B7C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA542C1E1D3100250B7C /* InputField */,
+				9BADAA4A2C1DE67F00250B7C /* BorderTextFieldModifier */,
+				9BADAA532C1DE7AC00250B7C /* CheckboxToggleStyle */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		9BADAA4A2C1DE67F00250B7C /* BorderTextFieldModifier */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA4B2C1DE6AF00250B7C /* BorderTextFieldModifier.swift */,
+				9BADAA4D2C1DE6F700250B7C /* TextFieldState.swift */,
+			);
+			path = BorderTextFieldModifier;
+			sourceTree = "<group>";
+		};
+		9BADAA532C1DE7AC00250B7C /* CheckboxToggleStyle */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA512C1DE79A00250B7C /* CheckboxToggleStyle.swift */,
+			);
+			path = CheckboxToggleStyle;
+			sourceTree = "<group>";
+		};
+		9BADAA542C1E1D3100250B7C /* InputField */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA552C1E1D3E00250B7C /* InputField.swift */,
+			);
+			path = InputField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,14 +326,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BADAA482C1DE00000250B7C /* AttributedString+Extensions.swift in Sources */,
+				9BADAA4E2C1DE6F700250B7C /* TextFieldState.swift in Sources */,
 				9BADAA3F2C1D605B00250B7C /* Font+Extensions.swift in Sources */,
+				9BADAA462C1DA9EF00250B7C /* View+TextStyle.swift in Sources */,
 				9BADAA062C1CDD4700250B7C /* ContentView.swift in Sources */,
 				9BADAA2C2C1CFF5700250B7C /* TextTheme+CareSaaS.swift in Sources */,
+				9BADAA412C1DA4D200250B7C /* LoginView.swift in Sources */,
 				9BADAA042C1CDD4700250B7C /* CareSaaSApp.swift in Sources */,
 				9BADAA3D2C1D5EC000250B7C /* AppFonts.swift in Sources */,
 				9BADAA282C1CFF2900250B7C /* TextTheme.swift in Sources */,
 				9BADAA2E2C1CFF6B00250B7C /* TextThemeModifier.swift in Sources */,
+				9BADAA562C1E1D3E00250B7C /* InputField.swift in Sources */,
+				9BADAA442C1DA87700250B7C /* LoginViewModel.swift in Sources */,
 				9BADAA3A2C1D0E8E00250B7C /* FontSize.swift in Sources */,
+				9BADAA502C1DE73700250B7C /* View+Extensions.swift in Sources */,
+				9BADAA522C1DE79A00250B7C /* CheckboxToggleStyle.swift in Sources */,
+				9BADAA4C2C1DE6AF00250B7C /* BorderTextFieldModifier.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

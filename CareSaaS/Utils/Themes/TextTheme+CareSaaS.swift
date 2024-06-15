@@ -59,6 +59,10 @@ extension TextTheme {
         TextTheme(font: .custom(.semiBold, size: .size16), color: Color(.bodyHighEmphasis))
     }
     
+    static var bodyHighEmphasisRegularSize16: TextTheme {
+        TextTheme(font: .custom(.semiBold, size: .size16), color: Color(.bodyHighEmphasis))
+    }
+    
     static var bodyHighEmphasisSize14: TextTheme {
         TextTheme(font: .custom(.bold, size: .size14), color: Color(.bodyHighEmphasis))
     }
@@ -69,5 +73,9 @@ extension TextTheme {
     
     static var primaryDisabledBoldSize16: TextTheme {
         TextTheme(font: .custom(.bold, size: .size16), color: Color(.primaryDisabled))
+    }
+    
+    static var labelPrimaryTitle: TextTheme {
+        TextTheme(font: .custom(.bold, size: .size32), color: Color(.labelPrimary))
     }
 }

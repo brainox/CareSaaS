@@ -13,14 +13,18 @@ struct LoginView: View {
     @State private var isChecked: Bool = false
     
     var body: some View {
-        VStack {
-            Spacer()
-            mainContent
-            Spacer()
-            Text(termsAndConditions)
-                .multilineTextAlignment(.center)
+        ZStack {
+            Color.white
+            VStack {
+                Spacer()
+                mainContent
+                Spacer()
+                Text(termsAndConditions)
+                    .multilineTextAlignment(.center)
+            }
+            .padding(.all, 16)
         }
-        .padding(.all, 16)
+        .ignoresSafeArea(.keyboard, edges: .bottom)
     }
     
     var mainContent: some View {
@@ -44,9 +48,9 @@ struct LoginView: View {
     
     var textFields: some View {
         VStack {
-            InputField(title: "Username", text: $viewModel.username, textFieldState: $viewModel.usernameState)
+            InputField(title: "Username", validationText: "Username must be at least 4 characters long", text: $viewModel.username, textFieldState: $viewModel.usernameState)
                 .padding(.bottom, 16)
-            InputField(title: "Password", text: $viewModel.password, textFieldState: $viewModel.passwordState)
+            InputField(title: "Password", validationText: "Password must be at least 8 characters long", text: $viewModel.password, textFieldState: $viewModel.passwordState)
         }
         .padding(.bottom, 24)
     }
@@ -74,7 +78,7 @@ struct LoginView: View {
                 .apply(theme: TextTheme.bodyWhiteSolid)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical)
-                .background(Color(.primaryHighEmphasis))
+                .background(viewModel.isValidLoginForm ? Color(.primaryHighEmphasis) : Color(.primaryDisabled))
                 .clipShape(RoundedRectangle(cornerRadius: 4))
         }
         .disabled(!viewModel.isValidLoginForm)

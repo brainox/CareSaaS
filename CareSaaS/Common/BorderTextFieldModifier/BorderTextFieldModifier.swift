@@ -13,9 +13,8 @@ struct BorderTextFieldModifier: ViewModifier {
     var verticalSpacing: CGFloat = 22
     var lineWidth: CGFloat = 2
     var cornerRadius: CGFloat = 8
-    
     var titleHorizontalSpacing: CGFloat = 5
-    
+
     var titleOffsetX: CGFloat {
         verticalSpacing + 40
     }

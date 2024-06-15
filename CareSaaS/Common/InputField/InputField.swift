@@ -9,11 +9,16 @@ import SwiftUI
 
 struct InputField: View {
     var title: String
+    var validationText: String
     @Binding var textFieldState: TextFieldState
     @Binding var text: String
 
-    init(title: String, text: Binding<String>, textFieldState: Binding<TextFieldState>) {
+    init(title: String,
+         validationText: String,
+         text: Binding<String>,
+         textFieldState: Binding<TextFieldState>) {
         self.title = title
+        self.validationText = validationText
         self._textFieldState = textFieldState
         self._text = text
     }
@@ -32,7 +37,7 @@ struct InputField: View {
             }
             .animation(.default)
             if textFieldState == .invalid {
-                Text("Username must be at least 4 characters long")
+                Text(validationText)
                     .font(.caption)
                     .foregroundColor(.red)
             }
@@ -41,5 +46,5 @@ struct InputField: View {
 }
 
 #Preview {
-    InputField(title: "Username", text: .constant("Username"), textFieldState: .constant(.invalid))
+    InputField(title: "Username", validationText: "Username must be at least 4 characters long", text: .constant("Username"), textFieldState: .constant(.invalid))
 }

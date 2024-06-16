@@ -139,14 +139,12 @@
 		9BADAA142C1CEA2900250B7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9BADAA772C1F265E00250B7C /* Activities */,
-				9BADAA762C1F264D00250B7C /* Medication */,
+				9BADAA052C1CDD4700250B7C /* ContentView.swift */,
 				9BADAA422C1DA86000250B7C /* Login */,
 				9BADAA5E2C1E7FE500250B7C /* Main */,
 				9BADAA592C1E7ED200250B7C /* Home */,
 				9BADAA612C1E800B00250B7C /* Search */,
 				9BADAA622C1E801500250B7C /* Account */,
-				9BADAA052C1CDD4700250B7C /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +258,8 @@
 		9BADAA492C1DE65700250B7C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9BADAA762C1F264D00250B7C /* Medication */,
+				9BADAA772C1F265E00250B7C /* Activities */,
 				9BADAA7F2C1F3EB400250B7C /* ImageTextView */,
 				9BADAA7E2C1F3E9F00250B7C /* ListCellView */,
 				9BADAA6F2C1F249300250B7C /* SegmentControlView */,

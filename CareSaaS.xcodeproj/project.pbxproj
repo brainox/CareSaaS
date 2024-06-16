@@ -27,6 +27,8 @@
 		9BADAA522C1DE79A00250B7C /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA512C1DE79A00250B7C /* CheckboxToggleStyle.swift */; };
 		9BADAA562C1E1D3E00250B7C /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA552C1E1D3E00250B7C /* InputField.swift */; };
 		9BADAA582C1E7DD000250B7C /* SecureInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA572C1E7DD000250B7C /* SecureInputField.swift */; };
+		9BADAA5B2C1E7EFC00250B7C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA5A2C1E7EFC00250B7C /* HomeView.swift */; };
+		9BADAA5D2C1E7F0600250B7C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA5C2C1E7F0600250B7C /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		9BADAA512C1DE79A00250B7C /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		9BADAA552C1E1D3E00250B7C /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		9BADAA572C1E7DD000250B7C /* SecureInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputField.swift; sourceTree = "<group>"; };
+		9BADAA5A2C1E7EFC00250B7C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9BADAA5C2C1E7F0600250B7C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +115,8 @@
 		9BADAA142C1CEA2900250B7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9BADAA422C1DA86000250B7C /* LoginView */,
+				9BADAA592C1E7ED200250B7C /* Home */,
+				9BADAA422C1DA86000250B7C /* Login */,
 				9BADAA052C1CDD4700250B7C /* ContentView.swift */,
 			);
 			path = Views;
@@ -214,13 +219,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		9BADAA422C1DA86000250B7C /* LoginView */ = {
+		9BADAA422C1DA86000250B7C /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				9BADAA402C1DA4D200250B7C /* LoginView.swift */,
 				9BADAA432C1DA87700250B7C /* LoginViewModel.swift */,
 			);
-			path = LoginView;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		9BADAA492C1DE65700250B7C /* Common */ = {
@@ -257,6 +262,15 @@
 				9BADAA572C1E7DD000250B7C /* SecureInputField.swift */,
 			);
 			path = InputField;
+			sourceTree = "<group>";
+		};
+		9BADAA592C1E7ED200250B7C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA5A2C1E7EFC00250B7C /* HomeView.swift */,
+				9BADAA5C2C1E7F0600250B7C /* HomeViewModel.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +346,7 @@
 				9BADAA482C1DE00000250B7C /* AttributedString+Extensions.swift in Sources */,
 				9BADAA4E2C1DE6F700250B7C /* TextFieldState.swift in Sources */,
 				9BADAA582C1E7DD000250B7C /* SecureInputField.swift in Sources */,
+				9BADAA5D2C1E7F0600250B7C /* HomeViewModel.swift in Sources */,
 				9BADAA3F2C1D605B00250B7C /* Font+Extensions.swift in Sources */,
 				9BADAA462C1DA9EF00250B7C /* View+TextStyle.swift in Sources */,
 				9BADAA062C1CDD4700250B7C /* ContentView.swift in Sources */,
@@ -347,6 +362,7 @@
 				9BADAA502C1DE73700250B7C /* View+Extensions.swift in Sources */,
 				9BADAA522C1DE79A00250B7C /* CheckboxToggleStyle.swift in Sources */,
 				9BADAA4C2C1DE6AF00250B7C /* BorderTextFieldModifier.swift in Sources */,
+				9BADAA5B2C1E7EFC00250B7C /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

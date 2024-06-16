@@ -10,7 +10,6 @@ import SwiftUI
 struct LoginView: View {
     
     @StateObject var viewModel = LoginViewModel()
-    @State private var isChecked: Bool = false
     
     var body: some View {
         ZStack {
@@ -57,7 +56,7 @@ struct LoginView: View {
     
     var rememberMeForgetPassword: some View {
         HStack {
-            Toggle(isOn: $isChecked) {
+            Toggle(isOn: $viewModel.isChecked) {
                 Text("Remember me")
                     .apply(theme: .bodyMediumPrimaryEmphasis)
             }

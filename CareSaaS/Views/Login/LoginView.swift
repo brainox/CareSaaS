@@ -12,18 +12,20 @@ struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
     
     var body: some View {
-        ZStack {
-            Color.white
-            VStack {
-                Spacer()
-                mainContent
-                Spacer()
-                Text(termsAndConditions)
-                    .multilineTextAlignment(.center)
+        NavigationView {
+            ZStack {
+                Color.white
+                VStack {
+                    Spacer()
+                    mainContent
+                    Spacer()
+                    Text(termsAndConditions)
+                        .multilineTextAlignment(.center)
+                }
+                .padding(.all, 16)
             }
-            .padding(.all, 16)
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
     }
     
     var mainContent: some View {
@@ -38,7 +40,11 @@ struct LoginView: View {
                 VStack {
                     textFields
                     rememberMeForgetPassword
-                    signInButton
+                    if viewModel.isSigningIn {
+                        ProgressView().progressViewStyle(.circular)
+                    } else {
+                        signInButton
+                    }
                     contactSupport
                 }
             }
@@ -51,6 +57,7 @@ struct LoginView: View {
                 .padding(.bottom, 16)
             SecureInputField(title: "Password", validationText: "Password must be at least 8 characters long", text: $viewModel.password, textFieldState: $viewModel.passwordState, isShowingPassword: $viewModel.isSecured)
         }
+        .disabled(viewModel.isSigningIn)
         .padding(.bottom, 24)
     }
     
@@ -71,7 +78,7 @@ struct LoginView: View {
     
     private var signInButton: some View {
         Button {
-            // Perform sign in
+            viewModel.signIn()
         } label: {
             Text("Sign in")
                 .apply(theme: TextTheme.bodyWhiteSolid)

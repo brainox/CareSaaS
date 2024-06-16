@@ -13,7 +13,6 @@ struct MedicationView: View {
         List(Array(0...9), id: \.self) { _ in
             ListCellView()
                 .listRowSeparator(.hidden)
-//                .listRowSpacing(15)
                 .listRowInsets(EdgeInsets())
         }
         .listRowSpacing(15)

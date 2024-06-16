@@ -19,12 +19,23 @@ final class LoginViewModel: ObservableObject {
     @Published var isValidLoginForm = false
     @Published var isSecured = false
     @Published var isChecked = false
+    @Published var isSigningIn = false
+    
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Initialization
     
     init() {
         configureInputs()
+    }
+    
+    // MARK: - Public Methods
+    
+    func signIn() {
+        isSigningIn = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+            self.isSigningIn = false
+        }
     }
 }
 

@@ -17,6 +17,7 @@ final class LoginViewModel: ObservableObject {
     @Published var usernameState: TextFieldState = .neutral
     @Published var passwordState: TextFieldState = .neutral
     @Published var isValidLoginForm = false
+    @Published var isSecured = false
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Initialization

@@ -26,6 +26,7 @@
 		9BADAA502C1DE73700250B7C /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA4F2C1DE73700250B7C /* View+Extensions.swift */; };
 		9BADAA522C1DE79A00250B7C /* CheckboxToggleStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA512C1DE79A00250B7C /* CheckboxToggleStyle.swift */; };
 		9BADAA562C1E1D3E00250B7C /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA552C1E1D3E00250B7C /* InputField.swift */; };
+		9BADAA582C1E7DD000250B7C /* SecureInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA572C1E7DD000250B7C /* SecureInputField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		9BADAA4F2C1DE73700250B7C /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		9BADAA512C1DE79A00250B7C /* CheckboxToggleStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxToggleStyle.swift; sourceTree = "<group>"; };
 		9BADAA552C1E1D3E00250B7C /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		9BADAA572C1E7DD000250B7C /* SecureInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				9BADAA552C1E1D3E00250B7C /* InputField.swift */,
+				9BADAA572C1E7DD000250B7C /* SecureInputField.swift */,
 			);
 			path = InputField;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				9BADAA482C1DE00000250B7C /* AttributedString+Extensions.swift in Sources */,
 				9BADAA4E2C1DE6F700250B7C /* TextFieldState.swift in Sources */,
+				9BADAA582C1E7DD000250B7C /* SecureInputField.swift in Sources */,
 				9BADAA3F2C1D605B00250B7C /* Font+Extensions.swift in Sources */,
 				9BADAA462C1DA9EF00250B7C /* View+TextStyle.swift in Sources */,
 				9BADAA062C1CDD4700250B7C /* ContentView.swift in Sources */,

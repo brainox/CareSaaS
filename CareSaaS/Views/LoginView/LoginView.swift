@@ -24,7 +24,7 @@ struct LoginView: View {
             }
             .padding(.all, 16)
         }
-        .ignoresSafeArea(.keyboard, edges: .bottom)
+        .ignoresSafeArea()
     }
     
     var mainContent: some View {
@@ -50,7 +50,7 @@ struct LoginView: View {
         VStack {
             InputField(title: "Username", validationText: "Username must be at least 4 characters long", text: $viewModel.username, textFieldState: $viewModel.usernameState)
                 .padding(.bottom, 16)
-            InputField(title: "Password", validationText: "Password must be at least 8 characters long", text: $viewModel.password, textFieldState: $viewModel.passwordState)
+            SecureInputField(title: "Password", validationText: "Password must be at least 8 characters long", text: $viewModel.password, textFieldState: $viewModel.passwordState, isShowingPassword: $viewModel.isSecured)
         }
         .padding(.bottom, 24)
     }

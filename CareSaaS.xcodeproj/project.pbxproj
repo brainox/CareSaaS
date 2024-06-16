@@ -29,6 +29,18 @@
 		9BADAA582C1E7DD000250B7C /* SecureInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA572C1E7DD000250B7C /* SecureInputField.swift */; };
 		9BADAA5B2C1E7EFC00250B7C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA5A2C1E7EFC00250B7C /* HomeView.swift */; };
 		9BADAA5D2C1E7F0600250B7C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA5C2C1E7F0600250B7C /* HomeViewModel.swift */; };
+		9BADAA602C1E7FF600250B7C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA5F2C1E7FF600250B7C /* MainView.swift */; };
+		9BADAA642C1E813500250B7C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA632C1E813500250B7C /* SearchView.swift */; };
+		9BADAA662C1E816300250B7C /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA652C1E816300250B7C /* AccountView.swift */; };
+		9BADAA692C1E8D3700250B7C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA682C1E8D3700250B7C /* CustomButton.swift */; };
+		9BADAA6C2C1E8DB500250B7C /* SegmentedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA6B2C1E8DB500250B7C /* SegmentedButtonView.swift */; };
+		9BADAA712C1F24B400250B7C /* BackgroundGeometryReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA702C1F24B400250B7C /* BackgroundGeometryReader.swift */; };
+		9BADAA732C1F24BD00250B7C /* SegmentControlSizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA722C1F24BD00250B7C /* SegmentControlSizePreferenceKey.swift */; };
+		9BADAA752C1F251600250B7C /* SegmentControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA742C1F251600250B7C /* SegmentControlView.swift */; };
+		9BADAA792C1F267900250B7C /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA782C1F267900250B7C /* ActivitiesView.swift */; };
+		9BADAA7B2C1F268300250B7C /* MedicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA7A2C1F268300250B7C /* MedicationView.swift */; };
+		9BADAA7D2C1F367500250B7C /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA7C2C1F367500250B7C /* ListCellView.swift */; };
+		9BADAA812C1F3EBE00250B7C /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA802C1F3EBE00250B7C /* ImageTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +71,18 @@
 		9BADAA572C1E7DD000250B7C /* SecureInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureInputField.swift; sourceTree = "<group>"; };
 		9BADAA5A2C1E7EFC00250B7C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9BADAA5C2C1E7F0600250B7C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		9BADAA5F2C1E7FF600250B7C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9BADAA632C1E813500250B7C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		9BADAA652C1E816300250B7C /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		9BADAA682C1E8D3700250B7C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		9BADAA6B2C1E8DB500250B7C /* SegmentedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedButtonView.swift; sourceTree = "<group>"; };
+		9BADAA702C1F24B400250B7C /* BackgroundGeometryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundGeometryReader.swift; sourceTree = "<group>"; };
+		9BADAA722C1F24BD00250B7C /* SegmentControlSizePreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlSizePreferenceKey.swift; sourceTree = "<group>"; };
+		9BADAA742C1F251600250B7C /* SegmentControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControlView.swift; sourceTree = "<group>"; };
+		9BADAA782C1F267900250B7C /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		9BADAA7A2C1F268300250B7C /* MedicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationView.swift; sourceTree = "<group>"; };
+		9BADAA7C2C1F367500250B7C /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
+		9BADAA802C1F3EBE00250B7C /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +139,13 @@
 		9BADAA142C1CEA2900250B7C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9BADAA592C1E7ED200250B7C /* Home */,
+				9BADAA772C1F265E00250B7C /* Activities */,
+				9BADAA762C1F264D00250B7C /* Medication */,
 				9BADAA422C1DA86000250B7C /* Login */,
+				9BADAA5E2C1E7FE500250B7C /* Main */,
+				9BADAA592C1E7ED200250B7C /* Home */,
+				9BADAA612C1E800B00250B7C /* Search */,
+				9BADAA622C1E801500250B7C /* Account */,
 				9BADAA052C1CDD4700250B7C /* ContentView.swift */,
 			);
 			path = Views;
@@ -231,6 +260,11 @@
 		9BADAA492C1DE65700250B7C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				9BADAA7F2C1F3EB400250B7C /* ImageTextView */,
+				9BADAA7E2C1F3E9F00250B7C /* ListCellView */,
+				9BADAA6F2C1F249300250B7C /* SegmentControlView */,
+				9BADAA6A2C1E8D6A00250B7C /* SegmentedButtonView */,
+				9BADAA672C1E8D2800250B7C /* CustomButton */,
 				9BADAA542C1E1D3100250B7C /* InputField */,
 				9BADAA4A2C1DE67F00250B7C /* BorderTextFieldModifier */,
 				9BADAA532C1DE7AC00250B7C /* CheckboxToggleStyle */,
@@ -271,6 +305,88 @@
 				9BADAA5C2C1E7F0600250B7C /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		9BADAA5E2C1E7FE500250B7C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA5F2C1E7FF600250B7C /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		9BADAA612C1E800B00250B7C /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA632C1E813500250B7C /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9BADAA622C1E801500250B7C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA652C1E816300250B7C /* AccountView.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		9BADAA672C1E8D2800250B7C /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA682C1E8D3700250B7C /* CustomButton.swift */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		9BADAA6A2C1E8D6A00250B7C /* SegmentedButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA6B2C1E8DB500250B7C /* SegmentedButtonView.swift */,
+			);
+			path = SegmentedButtonView;
+			sourceTree = "<group>";
+		};
+		9BADAA6F2C1F249300250B7C /* SegmentControlView */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA742C1F251600250B7C /* SegmentControlView.swift */,
+				9BADAA702C1F24B400250B7C /* BackgroundGeometryReader.swift */,
+				9BADAA722C1F24BD00250B7C /* SegmentControlSizePreferenceKey.swift */,
+			);
+			path = SegmentControlView;
+			sourceTree = "<group>";
+		};
+		9BADAA762C1F264D00250B7C /* Medication */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA7A2C1F268300250B7C /* MedicationView.swift */,
+			);
+			path = Medication;
+			sourceTree = "<group>";
+		};
+		9BADAA772C1F265E00250B7C /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA782C1F267900250B7C /* ActivitiesView.swift */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		9BADAA7E2C1F3E9F00250B7C /* ListCellView */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA7C2C1F367500250B7C /* ListCellView.swift */,
+			);
+			path = ListCellView;
+			sourceTree = "<group>";
+		};
+		9BADAA7F2C1F3EB400250B7C /* ImageTextView */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA802C1F3EBE00250B7C /* ImageTextView.swift */,
+			);
+			path = ImageTextView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,22 +460,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BADAA482C1DE00000250B7C /* AttributedString+Extensions.swift in Sources */,
+				9BADAA7B2C1F268300250B7C /* MedicationView.swift in Sources */,
 				9BADAA4E2C1DE6F700250B7C /* TextFieldState.swift in Sources */,
 				9BADAA582C1E7DD000250B7C /* SecureInputField.swift in Sources */,
 				9BADAA5D2C1E7F0600250B7C /* HomeViewModel.swift in Sources */,
+				9BADAA7D2C1F367500250B7C /* ListCellView.swift in Sources */,
+				9BADAA602C1E7FF600250B7C /* MainView.swift in Sources */,
+				9BADAA732C1F24BD00250B7C /* SegmentControlSizePreferenceKey.swift in Sources */,
 				9BADAA3F2C1D605B00250B7C /* Font+Extensions.swift in Sources */,
 				9BADAA462C1DA9EF00250B7C /* View+TextStyle.swift in Sources */,
 				9BADAA062C1CDD4700250B7C /* ContentView.swift in Sources */,
+				9BADAA662C1E816300250B7C /* AccountView.swift in Sources */,
 				9BADAA2C2C1CFF5700250B7C /* TextTheme+CareSaaS.swift in Sources */,
 				9BADAA412C1DA4D200250B7C /* LoginView.swift in Sources */,
+				9BADAA642C1E813500250B7C /* SearchView.swift in Sources */,
 				9BADAA042C1CDD4700250B7C /* CareSaaSApp.swift in Sources */,
 				9BADAA3D2C1D5EC000250B7C /* AppFonts.swift in Sources */,
+				9BADAA812C1F3EBE00250B7C /* ImageTextView.swift in Sources */,
+				9BADAA792C1F267900250B7C /* ActivitiesView.swift in Sources */,
 				9BADAA282C1CFF2900250B7C /* TextTheme.swift in Sources */,
 				9BADAA2E2C1CFF6B00250B7C /* TextThemeModifier.swift in Sources */,
+				9BADAA712C1F24B400250B7C /* BackgroundGeometryReader.swift in Sources */,
+				9BADAA752C1F251600250B7C /* SegmentControlView.swift in Sources */,
+				9BADAA6C2C1E8DB500250B7C /* SegmentedButtonView.swift in Sources */,
 				9BADAA562C1E1D3E00250B7C /* InputField.swift in Sources */,
 				9BADAA442C1DA87700250B7C /* LoginViewModel.swift in Sources */,
 				9BADAA3A2C1D0E8E00250B7C /* FontSize.swift in Sources */,
 				9BADAA502C1DE73700250B7C /* View+Extensions.swift in Sources */,
+				9BADAA692C1E8D3700250B7C /* CustomButton.swift in Sources */,
 				9BADAA522C1DE79A00250B7C /* CheckboxToggleStyle.swift in Sources */,
 				9BADAA4C2C1DE6AF00250B7C /* BorderTextFieldModifier.swift in Sources */,
 				9BADAA5B2C1E7EFC00250B7C /* HomeView.swift in Sources */,

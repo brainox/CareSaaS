@@ -78,4 +78,12 @@ extension TextTheme {
     static var labelPrimaryTitle: TextTheme {
         TextTheme(font: .custom(.bold, size: .size32), color: Color(.labelPrimary))
     }
+    
+    static var labelPrimarySubTitle: TextTheme {
+        TextTheme(font: .custom(.bold, size: .size16), color: Color(.labelPrimary))
+    }
+    
+    static var labelPrimaryCellTitle: TextTheme {
+        TextTheme(font: .custom(.bold, size: .size14), color: Color(.labelPrimary))
+    }
 }

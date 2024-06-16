@@ -8,9 +8,78 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var homeViewModel = HomeViewModel()
+    @StateObject var viewModel = HomeViewModel()
+    @State private var select: Int = 0
+    private var items = ["Medication", "Activities"]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        content
+        .padding()
+    }
+    
+    var content: some View {
+        VStack {
+            topView
+            clockSection
+            SegmentControlView(items: items, selection: $select)
+                .padding(.vertical, 24)
+            if select == 0 {
+                MedicationView()
+               
+            } else {
+                ActivitiesView()
+            }
+            Spacer()
+        }
+    }
+    
+    var topView: some View {
+        HStack(alignment: .bottom) {
+            VStack(alignment: .leading) {
+                Text("Hi, George!")
+                    .apply(theme: .labelPrimarySubTitle)
+                Text("Clock-in to begin your task")
+                    .apply(theme: .bodyMediumSecondaryEmphasis)
+            }
+            Spacer()
+            Image("notification", bundle: nil)
+        }
+        .padding(.bottom, 20)
+    }
+    
+    @ViewBuilder
+    var clockSection: some View {
+            if viewModel.clockedIn {
+                clockOutSection
+            } else {
+                clockInButton
+            }
+    }
+    
+    var clockInButton: some View {
+        VStack {
+            CustomButton(title: "Clock-in", color: .primaryHighEmphasis) {
+                viewModel.toggleClockIn()
+            }
+        }
+    }
+    
+    var clockOutSection: some View {
+        HStack {
+            takeABreakButton
+            Spacer()
+            clockOutButton
+        }
+    }
+    
+    var takeABreakButton: some View {
+        CustomButton(title: "Take a Break", color: .backgroundYellow)
+    }
+    
+    var clockOutButton: some View {
+        CustomButton(title: "Clock-out", color: .backgroundRed) {
+            viewModel.toggleClockIn()
+        }
     }
 }
 

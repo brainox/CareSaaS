@@ -17,6 +17,10 @@ enum Environment {
         "accessToken"
     }
     
+    static var assignee: String {
+        "assignee"
+    }
+    
     static var userName: String {
         "userName"
     }

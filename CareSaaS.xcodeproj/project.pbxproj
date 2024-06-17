@@ -60,6 +60,7 @@
 		9BCE63252C205D4000A7D45D /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63242C205D4000A7D45D /* KeychainService.swift */; };
 		9BCE63282C20780C00A7D45D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63272C20780C00A7D45D /* APIService.swift */; };
 		9BCE632B2C207A3100A7D45D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE632A2C207A3100A7D45D /* APIClient.swift */; };
+		9BCE63322C20BE0800A7D45D /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63312C20BE0800A7D45D /* UserDefaults+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		9BCE63242C205D4000A7D45D /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		9BCE63272C20780C00A7D45D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		9BCE632A2C207A3100A7D45D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9BCE63312C20BE0800A7D45D /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 				9BADAA472C1DE00000250B7C /* AttributedString+Extensions.swift */,
 				9BCE63122C203C9400A7D45D /* Binding+Extensions.swift */,
 				9BCE631E2C20510100A7D45D /* URLRequest+Extentions.swift */,
+				9BCE63312C20BE0800A7D45D /* UserDefaults+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -586,6 +589,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BADAA482C1DE00000250B7C /* AttributedString+Extensions.swift in Sources */,
+				9BCE63322C20BE0800A7D45D /* UserDefaults+Extensions.swift in Sources */,
 				9BADAA7B2C1F268300250B7C /* MedicationView.swift in Sources */,
 				9BADAA8B2C1F7CA400250B7C /* UserToken.swift in Sources */,
 				9BCE632B2C207A3100A7D45D /* APIClient.swift in Sources */,

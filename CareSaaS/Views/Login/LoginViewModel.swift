@@ -25,7 +25,7 @@ final class LoginViewModel: ObservableObject {
     @Published private(set) var isSignedIn = false
     
     private let keychainService: KeychainService
-    private let apiService: APIService
+    let apiService: APIService
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -59,6 +59,7 @@ final class LoginViewModel: ObservableObject {
             } receiveValue: { [weak self] response in
                 guard let self = self else { return }
                 self.keychainService.setAccessToken(response.userToken?.accessToken ?? "")
+                UserDefaults.setAssignee(with: response.user?.userId ?? "")
             }
             .store(in: &cancellables)
 

@@ -9,6 +9,6 @@ import Foundation
 
 // Model for TaskAssignment
 struct TaskAssignment: Decodable {
-    let assignee: Assignee
-    let assignmentStatus: String
+    let assignee: Assignee?
+    let assignmentStatus: String?
 }

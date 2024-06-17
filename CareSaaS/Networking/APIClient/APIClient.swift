@@ -16,8 +16,8 @@ final class APIClient: APIService {
         request(.login(userName: userName, password: password))
     }
     
-    func getAllTasks() -> AnyPublisher<[Tasks], APIError> {
-        request(.tasks)
+    func getAllTasks(assignee: String) -> AnyPublisher<[Tasks], APIError> {
+        request(.tasks(queryParams: [Environment.assignee: assignee]))
     }
 }
 

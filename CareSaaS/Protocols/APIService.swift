@@ -14,5 +14,5 @@ protocol APIService {
     
     func signIn(userName: String, password: String) -> AnyPublisher<LoginResponse, APIError>
     
-    func getAllTasks() -> AnyPublisher<[Tasks], APIError>
+    func getAllTasks(assignee: String) -> AnyPublisher<[Tasks], APIError>
 }

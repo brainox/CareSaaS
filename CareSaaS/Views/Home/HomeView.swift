@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = HomeViewModel()
-    @State private var select: Int = 0
-    private var items = ["Medication", "Activities"]
+    @StateObject var viewModel = HomeViewModel(apiService: APIClient())
+    @State var select: Int = 0
+    let items = ["Medication", "Activities"]
     
     var body: some View {
         content
@@ -83,6 +83,6 @@ struct HomeView: View {
     }
 }
 
-#Preview {
-    HomeView()
-}
+//#Preview {
+//    HomeView()
+//}

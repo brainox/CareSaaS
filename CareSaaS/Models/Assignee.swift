@@ -9,7 +9,7 @@ import Foundation
 
 // Model for Assignee
 struct Assignee: Decodable {
-    let userId: Int
-    let firstName: String
-    let lastName: String
+    let userId: Int?
+    let firstName: String?
+    let lastName: String?
 }

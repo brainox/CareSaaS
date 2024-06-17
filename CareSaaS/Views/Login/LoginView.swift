@@ -23,6 +23,14 @@ struct LoginView: View {
                         .multilineTextAlignment(.center)
                 }
                 .padding(.all, 16)
+                if viewModel.isSigningIn {
+                    ZStack {
+                        Color(white: 1.0)
+                            .opacity(0.75)
+                        ProgressView()
+                            .progressViewStyle(.circular)
+                    }
+                }
             }
             .ignoresSafeArea()
         }
@@ -76,7 +84,7 @@ struct LoginView: View {
         Button {
             viewModel.signIn()
         } label: {
-            Text(viewModel.isSigningIn ? "Signing in ..." : "Sign in")
+            Text("Sign in")
                 .apply(theme: TextTheme.bodyWhiteSolid)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical)

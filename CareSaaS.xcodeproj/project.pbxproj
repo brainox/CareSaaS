@@ -151,11 +151,10 @@
 		9BADAA022C1CDD4700250B7C /* CareSaaS */ = {
 			isa = PBXGroup;
 			children = (
+				9BADAA172C1CEAA800250B7C /* App */,
 				9BCE63232C205D2600A7D45D /* Services */,
 				9BCE63142C20487100A7D45D /* Configuration */,
 				9BCE630D2C2035E300A7D45D /* Networking */,
-				9BADAA172C1CEAA800250B7C /* App */,
-				9BADAA242C1CF3C100250B7C /* Managers */,
 				9BADAA142C1CEA2900250B7C /* Views */,
 				9BADAA182C1CEAB800250B7C /* Models */,
 				9BADAA492C1DE65700250B7C /* Common */,
@@ -260,13 +259,6 @@
 				9BADAA2D2C1CFF6B00250B7C /* TextThemeModifier.swift */,
 			);
 			path = Themes;
-			sourceTree = "<group>";
-		};
-		9BADAA242C1CF3C100250B7C /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Managers;
 			sourceTree = "<group>";
 		};
 		9BADAA262C1CF50200250B7C /* View+Extensions */ = {

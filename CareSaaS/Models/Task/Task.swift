@@ -7,10 +7,13 @@
 
 import Foundation
 
-// Main model for Task
-struct Tasks: Decodable {
+/// The structure for Task
+struct Tasks: Codable, Identifiable {
+    var id: Int {
+        userId
+    }
     let taskId: Int?
-    let userId: Int?
+    let userId: Int
     let taskDetailRef: String?
     let timeOfDay: String?
     let hourOfDay: String?

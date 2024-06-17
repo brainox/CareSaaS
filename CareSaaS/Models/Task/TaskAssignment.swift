@@ -8,7 +8,7 @@
 import Foundation
 
 // Model for TaskAssignment
-struct TaskAssignment: Decodable {
+struct TaskAssignment: Codable {
     let assignee: Assignee?
     let assignmentStatus: String?
 }

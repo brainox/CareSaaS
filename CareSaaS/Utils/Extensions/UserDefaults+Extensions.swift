@@ -13,6 +13,6 @@ extension UserDefaults {
     }
     
     static func getAssignee() -> String {
-        return UserDefaults.standard.string(forKey: "awesomeValue") ?? ""
+        return UserDefaults.standard.string(forKey: "assignee") ?? ""
     }
 }

@@ -205,9 +205,6 @@
 			children = (
 				9BCE632C2C20B17600A7D45D /* Login */,
 				9BCE632D2C20B17F00A7D45D /* Task */,
-				9BADAA8C2C1F7F4800250B7C /* Assignee.swift */,
-				9BADAA8E2C1F7F5900250B7C /* TaskAssignment.swift */,
-				9BADAA902C1F7F6000250B7C /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -500,6 +497,9 @@
 		9BCE632D2C20B17F00A7D45D /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				9BADAA8C2C1F7F4800250B7C /* Assignee.swift */,
+				9BADAA8E2C1F7F5900250B7C /* TaskAssignment.swift */,
+				9BADAA902C1F7F6000250B7C /* Task.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";

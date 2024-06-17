@@ -11,13 +11,20 @@ import Combine
 final class HomeViewModel: ObservableObject {
     
     // MARK: - Properties
-    let apiService: APIService
+    
+    @Published var tasks: [Tasks] = []
+    @Published var error: Error?
     @Published var clockedIn: Bool = false
+    
+    private let apiService: APIService
+    private let keychainService: KeychainService
+    
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Initialization
-    init(apiService: APIService) {
+    init(apiService: APIService, keychainService: KeychainService) {
         self.apiService = apiService
+        self.keychainService = keychainService
         getTasks()
     }
     
@@ -34,6 +41,10 @@ final class HomeViewModel: ObservableObject {
 
 private extension HomeViewModel {
     
+    func resetKeyChain() {
+        keychainService.resetAccessToken()
+    }
+    
     func getTasks() {
         let assignee = UserDefaults.getAssignee()
         apiService.getAllTasks(assignee: assignee)
@@ -43,11 +54,11 @@ private extension HomeViewModel {
                 case .finished:
                     ()
                 case .failure(let error):
-                    print("error is \(error)")
+                    self.error = error
                 }
             } receiveValue: { [weak self] tasks in
                 guard let self = self else { return }
-                print("The tasks are: \(tasks)")
+                self.tasks = tasks
             }
             .store(in: &cancellables)
 

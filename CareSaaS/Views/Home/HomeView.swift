@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var viewModel = HomeViewModel(apiService: APIClient())
+    @StateObject var viewModel = HomeViewModel(apiService: APIClient(), keychainService: KeychainService())
     @State var select: Int = 0
     let items = ["Medication", "Activities"]
     
     var body: some View {
         content
         .padding()
+        .alert(viewModel.error?.localizedDescription ?? "Error", isPresented: Binding(value: $viewModel.error)) {
+            Button("OK"){}
+        }
     }
     
     var content: some View {
@@ -24,10 +27,10 @@ struct HomeView: View {
             SegmentControlView(items: items, selection: $select)
                 .padding(.vertical, 24)
             if select == 0 {
-                MedicationView()
+                MedicationView(tasks: viewModel.tasks)
                
             } else {
-                ActivitiesView()
+                ActivitiesView(tasks: viewModel.tasks)
             }
             Spacer()
         }

@@ -46,18 +46,18 @@ private extension APIClient {
                     }
                     
                     // Print the raw JSON response for debugging
+                    #if DEBUG
                     if let json = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) {
                         print("JSON Response: \(json)")
                     } else {
                         print("Failed to serialize JSON")
                     }
+                    #endif
                     
                     do {
                         let decoder = JSONDecoder()
-                        decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        return try JSONDecoder().decode(T.self, from: data)
+                        return try decoder.decode(T.self, from: data)
                     } catch {
-                        print("Unable to Decode Response \(error)")
                         throw APIError.invalidResponse
                     }
                 }

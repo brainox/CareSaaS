@@ -8,7 +8,7 @@
 import Foundation
 
 // Model for Assignee
-struct Assignee: Decodable {
+struct Assignee: Codable {
     let userId: Int?
     let firstName: String?
     let lastName: String?

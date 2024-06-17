@@ -62,13 +62,6 @@ final class LoginViewModel: ObservableObject {
                 UserDefaults.setAssignee(with: response.user?.userId ?? "")
             }
             .store(in: &cancellables)
-
-
-//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
-////            self.isSigningIn = false
-////            self.error = APIError.unreachable
-//            self.keychainService.setAccessToken("AnyAccessToken")
-//        }
     }
 }
 
@@ -153,7 +146,6 @@ private extension LoginViewModel {
 // MARK: - Keychain Configuration
 
 private extension LoginViewModel {
-    
     func resetKeyChain() {
         keychainService.resetAccessToken()
     }

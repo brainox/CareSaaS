@@ -8,24 +8,35 @@
 import SwiftUI
 
 struct ListCellView: View {
+    
+    // MARK: - Properties
+    
+    let title: String
+    let assignee: String
+    let door: String
+    let bed: String
+    let time: String
+    
+    // MARK: - View Conformance
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Text("4 Medications to take")
+                    Text(title)
                     Spacer()
                     Image("arrow-alt-circle-up")
                 }
                 Spacer()
-                ImageTextView(image: "user", text: "James")
+                ImageTextView(image: "user", text: assignee)
                 Spacer()
                 HStack {
                     HStack(spacing: 16) {
-                        ImageTextView(image: "door-open-solid", text: "RM 3A")
-                        ImageTextView(image: "bed-solid", text: "Bed 45")
+                        ImageTextView(image: "door-open-solid", text: door)
+                        ImageTextView(image: "bed-solid", text: bed)
                     }
                     Spacer()
-                    ImageTextView(image: "clock-solid", text: "9:00 AM")
+                    ImageTextView(image: "clock-solid", text: time)
                 }
             }
             .padding()
@@ -37,5 +48,5 @@ struct ListCellView: View {
 }
 
 #Preview {
-    ListCellView()
+    ListCellView(title: "4 Medications to take", assignee: "James", door: "Room 4", bed: "Bed 45", time: "9:00 AM")
 }

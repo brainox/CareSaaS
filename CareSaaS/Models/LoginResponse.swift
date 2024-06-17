@@ -8,6 +8,6 @@
 import Foundation
 
 struct LoginResponse: Codable {
-    let user: User
-    let userToken: UserToken
+    let user: User?
+    let userToken: UserToken?
 }

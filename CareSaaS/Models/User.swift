@@ -8,15 +8,29 @@
 import Foundation
 
 struct User: Codable {
-    let sub: String
-    let email_verified: Bool
-    let realm_access: RealmAccess
-    let name: String
-    let preferred_username: String
-    let given_name: String
-    let userId: String
-    let family_name: String
-    let email: String
-    let organization: String
-    let careHome: String
+    let sub: String?
+    let emailVerified: Bool?
+    let realmAccess: RealmAccess?
+    let name: String?
+    let preferredUsername: String?
+    let givenName: String?
+    let userId: String?
+    let familyName: String?
+    let email: String?
+    let organization: String?
+    let careHome: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case sub
+        case emailVerified = "email_verified"
+        case realmAccess = "realm_access"
+        case name
+        case preferredUsername = "preferred_username"
+        case givenName = "given_name"
+        case userId = "userId"
+        case familyName = "family_name"
+        case email
+        case organization
+        case careHome = "careHome"
+    }
 }

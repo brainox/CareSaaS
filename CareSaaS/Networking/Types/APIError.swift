@@ -11,6 +11,7 @@ enum APIError: Error, LocalizedError {
     case unknown
     case failedRequest
     case invalidResponse
+    case unauthorized
     case unreachable
  
     var errorDescription: String? {
@@ -18,7 +19,9 @@ enum APIError: Error, LocalizedError {
         case .unreachable:
             return "You need a network connection"
         case .unknown, .failedRequest, .invalidResponse:
-            return "The list could not be fetched"
+            return "Oops! An error occured."
+        case .unauthorized:
+            return "You are unauthorized to access this data"
         }
     }
 }

@@ -14,7 +14,7 @@ struct RootView: View {
     private let keychainService = KeychainService()
     
     var body: some View {
-        LoginView(viewModel: LoginViewModel(keychainService: keychainService))
+        LoginView(viewModel: LoginViewModel(apiService: APIClient(), keychainService: keychainService))
     }
 }
 

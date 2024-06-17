@@ -25,11 +25,14 @@ final class LoginViewModel: ObservableObject {
     @Published private(set) var isSignedIn = false
     
     private let keychainService: KeychainService
+    private let apiService: APIService
+    
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Initialization
     
-    init(keychainService: KeychainService) {
+    init(apiService: APIService, keychainService: KeychainService) {
+        self.apiService = apiService
         self.keychainService = keychainService
         setupBindings()
         resetKeyChain()
@@ -40,11 +43,31 @@ final class LoginViewModel: ObservableObject {
     
     func signIn() {
         isSigningIn = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
-//            self.isSigningIn = false
-//            self.error = APIError.unreachable
-            self.keychainService.setAccessToken("AnyAccessToken")
-        }
+        error = nil
+        
+        apiService.signIn(email: username, password: password)
+            .sink { [weak self] completion in
+                guard let self = self else { return }
+                self.password = ""
+                self.isSigningIn = false
+                switch completion {
+                case .finished:
+                    ()
+                case .failure(let error):
+                    self.error = error
+                }
+            } receiveValue: { [weak self] response in
+                guard let self = self else { return }
+                self.keychainService.setAccessToken(response.userToken?.accessToken ?? "")
+            }
+            .store(in: &cancellables)
+
+
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+////            self.isSigningIn = false
+////            self.error = APIError.unreachable
+//            self.keychainService.setAccessToken("AnyAccessToken")
+//        }
     }
 }
 

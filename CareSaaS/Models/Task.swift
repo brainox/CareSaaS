@@ -8,7 +8,7 @@
 import Foundation
 
 // Main model for Task
-struct Task: Decodable {
+struct Tasks: Decodable {
     let taskId: Int
     let userId: Int
     let taskDetailRef: String

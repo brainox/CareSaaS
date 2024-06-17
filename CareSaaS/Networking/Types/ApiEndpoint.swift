@@ -10,15 +10,30 @@ import Foundation
 enum ApiEndpoint {
     // MARK: - Cases
     
-    case login
+    case login(email: String, password: String)
     case tasks
     
     // MARK: - Properties
     
-    var request: URLRequest {
+    func request(accessToken: String?) throws -> URLRequest {
         var request = URLRequest(url: url)
-        request.addHeader(headers)
+
+        request.addHeaders(headers)
         request.httpMethod = httpMethod.rawValue
+
+        if requiresAuthorization {
+            if let accessToken = accessToken {
+                request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+            } else {
+                throw APIError.unauthorized
+            }
+        }
+        
+        if case let .login(email: email, password: password) = self {
+                   let parameters: [String: String] = ["userName": email, "password": password]
+                   request.httpBody = try JSONEncoder().encode(parameters)
+               }
+
         return request
     }
     
@@ -41,19 +56,27 @@ private extension ApiEndpoint {
         }
     }
     
+    private var requiresAuthorization: Bool {
+        switch self {
+        case .login:
+            false
+        case .tasks:
+            true
+        }
+    }
+    
     private var headers: Headers {
         [
             "Content-Type": "application/json",
-            "Authorization": Environment.accessToken
         ]
     }
     
     private var httpMethod: HTTPMethod {
         switch self {
         case .login:
-            return .post
+            return .POST
         case .tasks:
-            return .get
+            return .GET
         }
     }
 }

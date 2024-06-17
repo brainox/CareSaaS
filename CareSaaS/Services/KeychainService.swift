@@ -15,7 +15,6 @@ final class KeychainService {
 
     private enum Keys {
         static let accessToken = "accessToken"
-        static let refreshToken = "refreshToken"
     }
 
     // MARK: - Properties
@@ -38,23 +37,7 @@ final class KeychainService {
         accessTokenPublisher = nil
     }
 
-    // MARK: - Refresh Token
-
-    @Published private(set) var refreshTokenPublisher: String?
-
-    var refreshToken: String? {
-        refreshTokenPublisher
-    }
-
-    func setRefreshToken(_ refreshToken: String) {
-        refreshTokenPublisher = refreshToken
-    }
-
-    func resetRefreshToken() {
-        refreshTokenPublisher = nil
-    }
-
-    // MARK: -
+    // MARK: - Private Method
 
     private var subscriptions: Set<AnyCancellable> = []
 
@@ -62,7 +45,6 @@ final class KeychainService {
 
     init() {
         accessTokenPublisher = CareSaas[Keys.accessToken]
-        refreshTokenPublisher = CareSaas[Keys.refreshToken]
 
         setupBindings()
     }
@@ -81,21 +63,6 @@ final class KeychainService {
                         try self?.CareSaas.remove(Keys.accessToken)
                     } catch {
                         print("Unable to Remove Access Token from Keychain \(error)")
-                    }
-                }
-            }).store(in: &subscriptions)
-
-        $refreshTokenPublisher
-            .sink(receiveCompletion: { _ in
-                ()
-            }, receiveValue: { [weak self] refreshToken in
-                if let accessToken = refreshToken {
-                    self?.CareSaas[Keys.refreshToken] = accessToken
-                } else {
-                    do {
-                        try self?.CareSaas.remove(Keys.refreshToken)
-                    } catch {
-                        print("Unable to Remove Refresh Token from Keychain \(error)")
                     }
                 }
             }).store(in: &subscriptions)

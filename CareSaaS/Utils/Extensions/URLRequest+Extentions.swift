@@ -9,7 +9,7 @@ import Foundation
 
 extension URLRequest {
     
-    mutating func addHeader(_ headers: Headers) {
+    mutating func addHeaders(_ headers: Headers) {
         headers.forEach { header, value in
             addValue(value, forHTTPHeaderField: header)
         }

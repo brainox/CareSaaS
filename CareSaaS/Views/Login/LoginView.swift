@@ -40,11 +40,7 @@ struct LoginView: View {
                 VStack {
                     textFields
                     rememberMeForgetPassword
-                    if viewModel.isSigningIn {
-                        ProgressView().progressViewStyle(.circular)
-                    } else {
-                        signInButton
-                    }
+                    signInButton
                     contactSupport
                 }
             }
@@ -80,7 +76,7 @@ struct LoginView: View {
         Button {
             viewModel.signIn()
         } label: {
-            Text("Sign in")
+            Text(viewModel.isSigningIn ? "Signing in ..." : "Sign in")
                 .apply(theme: TextTheme.bodyWhiteSolid)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical)
@@ -90,6 +86,9 @@ struct LoginView: View {
         .disabled(!viewModel.isValidLoginForm)
         .padding(.bottom, 24)
         .padding(.top, 32)
+        .alert(viewModel.error?.localizedDescription ?? "Error", isPresented: Binding(value: $viewModel.error)) {
+            Button("OK"){}
+        }
     }
     
     var contactSupport: some View {

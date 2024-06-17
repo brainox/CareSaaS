@@ -14,6 +14,8 @@ final class LoginViewModel: ObservableObject {
     
     @Published var username = ""
     @Published var password = ""
+    @Published var showAlert = false
+    @Published var error: Error?
     @Published var usernameState: TextFieldState = .neutral
     @Published var passwordState: TextFieldState = .neutral
     @Published var isValidLoginForm = false
@@ -35,6 +37,7 @@ final class LoginViewModel: ObservableObject {
         isSigningIn = true
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
             self.isSigningIn = false
+            self.error = APIError.unreachable
         }
     }
 }
@@ -53,10 +56,9 @@ private extension LoginViewModel {
             .eraseToAnyPublisher()
     }
     
-    
     var isPasswordValidPublisher: AnyPublisher<Bool, Never> {
         $password
-            .debounce(for: 0.8, scheduler: RunLoop.main)
+            .debounce(for: 0.5, scheduler: RunLoop.main)
             .removeDuplicates()
             .map { password in
                 return password.count >= 8
@@ -74,7 +76,7 @@ private extension LoginViewModel {
     
     var usernameStatePublisher: AnyPublisher<TextFieldState, Never> {
       $username
-        .debounce(for: 0.8, scheduler: RunLoop.main)
+        .debounce(for: 0.5, scheduler: RunLoop.main)
         .removeDuplicates()
         .map { username in
           if username.isEmpty {

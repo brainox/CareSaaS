@@ -201,11 +201,8 @@
 		9BADAA182C1CEAB800250B7C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9BADAA822C1F7C6600250B7C /* LoginRequest.swift */,
-				9BADAA842C1F7C7900250B7C /* LoginResponse.swift */,
-				9BADAA862C1F7C9000250B7C /* User.swift */,
-				9BADAA882C1F7C9A00250B7C /* RealmAccess.swift */,
-				9BADAA8A2C1F7CA400250B7C /* UserToken.swift */,
+				9BCE632C2C20B17600A7D45D /* Login */,
+				9BCE632D2C20B17F00A7D45D /* Task */,
 				9BADAA8C2C1F7F4800250B7C /* Assignee.swift */,
 				9BADAA8E2C1F7F5900250B7C /* TaskAssignment.swift */,
 				9BADAA902C1F7F6000250B7C /* Task.swift */,
@@ -436,6 +433,7 @@
 		9BCE630D2C2035E300A7D45D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				9BCE632E2C20B1BA00A7D45D /* Models */,
 				9BCE63292C207A0700A7D45D /* APIClient */,
 				9BCE63172C204BF300A7D45D /* Types */,
 			);
@@ -483,6 +481,32 @@
 				9BCE632A2C207A3100A7D45D /* APIClient.swift */,
 			);
 			path = APIClient;
+			sourceTree = "<group>";
+		};
+		9BCE632C2C20B17600A7D45D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA842C1F7C7900250B7C /* LoginResponse.swift */,
+				9BADAA862C1F7C9000250B7C /* User.swift */,
+				9BADAA882C1F7C9A00250B7C /* RealmAccess.swift */,
+				9BADAA8A2C1F7CA400250B7C /* UserToken.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9BCE632D2C20B17F00A7D45D /* Task */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		9BCE632E2C20B1BA00A7D45D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9BADAA822C1F7C6600250B7C /* LoginRequest.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

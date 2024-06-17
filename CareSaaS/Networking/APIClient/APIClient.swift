@@ -12,8 +12,8 @@ final class APIClient: APIService {
     
     // MARK: - Protocol Conformance
     
-    func signIn(email: String, password: String) -> AnyPublisher<LoginResponse, APIError> {
-        request(.login(email: email, password: password))
+    func signIn(userName: String, password: String) -> AnyPublisher<LoginResponse, APIError> {
+        request(.login(userName: userName, password: password))
     }
     
     func getAllTasks() -> AnyPublisher<[Tasks], APIError> {

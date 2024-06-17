@@ -45,7 +45,7 @@ final class LoginViewModel: ObservableObject {
         isSigningIn = true
         error = nil
         
-        apiService.signIn(email: username, password: password)
+        apiService.signIn(userName: username, password: password)
             .sink { [weak self] completion in
                 guard let self = self else { return }
                 self.password = ""

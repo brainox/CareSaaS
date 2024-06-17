@@ -10,7 +10,7 @@ import Foundation
 enum ApiEndpoint {
     // MARK: - Cases
     
-    case login(email: String, password: String)
+    case login(userName: String, password: String)
     case tasks
     
     // MARK: - Properties
@@ -29,8 +29,8 @@ enum ApiEndpoint {
             }
         }
         
-        if case let .login(email: email, password: password) = self {
-                   let parameters: [String: String] = ["userName": email, "password": password]
+        if case let .login(userName: userName, password: password) = self {
+                   let parameters: [String: String] = ["userName": userName, "password": password]
                    request.httpBody = try JSONEncoder().encode(parameters)
                }
 

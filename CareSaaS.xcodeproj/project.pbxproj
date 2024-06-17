@@ -57,6 +57,7 @@
 		9BCE631B2C204E5700A7D45D /* typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE631A2C204E5700A7D45D /* typealiases.swift */; };
 		9BCE631D2C20507300A7D45D /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE631C2C20507300A7D45D /* HTTPMethod.swift */; };
 		9BCE631F2C20510100A7D45D /* URLRequest+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE631E2C20510100A7D45D /* URLRequest+Extentions.swift */; };
+		9BCE63222C205BD600A7D45D /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 9BCE63212C205BD600A7D45D /* KeychainAccess */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BCE63222C205BD600A7D45D /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +479,9 @@
 			dependencies = (
 			);
 			name = CareSaaS;
+			packageProductDependencies = (
+				9BCE63212C205BD600A7D45D /* KeychainAccess */,
+			);
 			productName = CareSaaS;
 			productReference = 9BADAA002C1CDD4700250B7C /* CareSaaS.app */;
 			productType = "com.apple.product-type.application";
@@ -505,6 +510,9 @@
 				Base,
 			);
 			mainGroup = 9BADA9F72C1CDD4700250B7C;
+			packageReferences = (
+				9BCE63202C205BD600A7D45D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 9BADAA012C1CDD4700250B7C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -784,6 +792,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9BCE63202C205BD600A7D45D /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9BCE63212C205BD600A7D45D /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BCE63202C205BD600A7D45D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9BADA9F82C1CDD4700250B7C /* Project object */;
 }

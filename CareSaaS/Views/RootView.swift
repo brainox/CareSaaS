@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct RootView: View {
+    
+    // MARK: - Properties
+    
+    private let keychainService = KeychainService()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        LoginView(viewModel: LoginViewModel(keychainService: keychainService))
     }
 }
 

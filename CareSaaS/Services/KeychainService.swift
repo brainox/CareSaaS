@@ -20,7 +20,7 @@ final class KeychainService {
 
     // MARK: - Properties
 
-    private let cocoacasts = Keychain(service: "com.cocoacasts")
+    private let CareSaas = Keychain(service: "com.CareSaas")
 
     // MARK: - Access Token
 
@@ -61,8 +61,8 @@ final class KeychainService {
     // MARK: - Initialization
 
     init() {
-        accessTokenPublisher = cocoacasts[Keys.accessToken]
-        refreshTokenPublisher = cocoacasts[Keys.refreshToken]
+        accessTokenPublisher = CareSaas[Keys.accessToken]
+        refreshTokenPublisher = CareSaas[Keys.refreshToken]
 
         setupBindings()
     }
@@ -75,10 +75,10 @@ final class KeychainService {
                 ()
             }, receiveValue: { [weak self] accessToken in
                 if let accessToken = accessToken {
-                    self?.cocoacasts[Keys.accessToken] = accessToken
+                    self?.CareSaas[Keys.accessToken] = accessToken
                 } else {
                     do {
-                        try self?.cocoacasts.remove(Keys.accessToken)
+                        try self?.CareSaas.remove(Keys.accessToken)
                     } catch {
                         print("Unable to Remove Access Token from Keychain \(error)")
                     }
@@ -90,10 +90,10 @@ final class KeychainService {
                 ()
             }, receiveValue: { [weak self] refreshToken in
                 if let accessToken = refreshToken {
-                    self?.cocoacasts[Keys.refreshToken] = accessToken
+                    self?.CareSaas[Keys.refreshToken] = accessToken
                 } else {
                     do {
-                        try self?.cocoacasts.remove(Keys.refreshToken)
+                        try self?.CareSaas.remove(Keys.refreshToken)
                     } catch {
                         print("Unable to Remove Refresh Token from Keychain \(error)")
                     }

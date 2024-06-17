@@ -9,31 +9,42 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @StateObject var viewModel = LoginViewModel()
+    // MARK: - Properties
+    
+    @ObservedObject var viewModel: LoginViewModel
+    
+    // MARK: - View
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color.white
-                VStack {
-                    Spacer()
-                    mainContent
-                    Spacer()
-                    Text(termsAndConditions)
-                        .multilineTextAlignment(.center)
-                }
-                .padding(.all, 16)
-                if viewModel.isSigningIn {
-                    ZStack {
-                        Color(white: 1.0)
-                            .opacity(0.75)
-                        ProgressView()
-                            .progressViewStyle(.circular)
-                    }
+        if viewModel.isSignedIn {
+            MainView()
+        } else {
+            loginContent
+        }
+        
+    }
+    
+    var loginContent: some View {
+        ZStack {
+            Color.white
+            VStack {
+                Spacer()
+                mainContent
+                Spacer()
+                Text(termsAndConditions)
+                    .multilineTextAlignment(.center)
+            }
+            .padding(.all, 16)
+            if viewModel.isSigningIn {
+                ZStack {
+                    Color(white: 1.0)
+                        .opacity(0.75)
+                    ProgressView()
+                        .progressViewStyle(.circular)
                 }
             }
-            .ignoresSafeArea()
         }
+        .ignoresSafeArea()
     }
     
     var mainContent: some View {
@@ -110,6 +121,6 @@ struct LoginView: View {
     let termsAndConditions = makeAttributedString("By clicking ‘Sign in’ above you agree to Arocare’s Terms & Conditions and Privacy Policy.", for: ["Terms & Conditions", "Privacy Policy."])
 }
 
-#Preview {
-    LoginView()
-}
+//#Preview {
+//    LoginView()
+//}

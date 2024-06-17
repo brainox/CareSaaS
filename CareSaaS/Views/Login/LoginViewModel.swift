@@ -22,12 +22,17 @@ final class LoginViewModel: ObservableObject {
     @Published var isSecured = false
     @Published var isChecked = false
     @Published var isSigningIn = false
+    @Published private(set) var isSignedIn = false
     
+    private let keychainService: KeychainService
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Initialization
     
-    init() {
+    init(keychainService: KeychainService) {
+        self.keychainService = keychainService
+        setupBindings()
+        resetKeyChain()
         configureInputs()
     }
     
@@ -36,8 +41,9 @@ final class LoginViewModel: ObservableObject {
     func signIn() {
         isSigningIn = true
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
-            self.isSigningIn = false
-            self.error = APIError.unreachable
+//            self.isSigningIn = false
+//            self.error = APIError.unreachable
+            self.keychainService.setAccessToken("AnyAccessToken")
         }
     }
 }
@@ -45,6 +51,23 @@ final class LoginViewModel: ObservableObject {
 // MARK: - Private Methods
 
 private extension LoginViewModel {
+    
+    func configureInputs() {
+        isLoginFormValidPublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.isValidLoginForm, on: self)
+            .store(in: &cancellables)
+        
+        usernameStatePublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.usernameState, on: self)
+            .store(in: &cancellables)
+            
+          passwordStatePublisher
+            .receive(on: RunLoop.main)
+            .assign(to: \.passwordState, on: self)
+            .store(in: &cancellables)
+    }
     
     var isUsernameValidPublisher: AnyPublisher<Bool, Never> {
         $username
@@ -101,21 +124,19 @@ private extension LoginViewModel {
         }
         .eraseToAnyPublisher()
     }
+}
+
+// MARK: - Keychain Configuration
+
+private extension LoginViewModel {
     
-    func configureInputs() {
-        isLoginFormValidPublisher
-            .receive(on: RunLoop.main)
-            .assign(to: \.isValidLoginForm, on: self)
-            .store(in: &cancellables)
-        
-        usernameStatePublisher
-            .receive(on: RunLoop.main)
-            .assign(to: \.usernameState, on: self)
-            .store(in: &cancellables)
-            
-          passwordStatePublisher
-            .receive(on: RunLoop.main)
-            .assign(to: \.passwordState, on: self)
-            .store(in: &cancellables)
+    func resetKeyChain() {
+        keychainService.resetAccessToken()
+    }
+    
+    private func setupBindings() {
+        keychainService.$accessTokenPublisher
+            .map { $0 != nil }
+            .assign(to: &$isSignedIn)
     }
 }

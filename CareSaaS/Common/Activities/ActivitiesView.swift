@@ -12,8 +12,10 @@ struct ActivitiesView: View {
         List(Array(0...9), id: \.self) { _ in
             ListCellView()
                 .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets())
         }
-        .listStyle(.inset)
+        .listRowSpacing(15)
+        .listStyle(.plain)
     }
 }
 

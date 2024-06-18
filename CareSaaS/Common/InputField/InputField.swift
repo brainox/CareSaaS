@@ -34,6 +34,7 @@ struct InputField: View {
                     .padding(.leading)
                 TextField("", text: $text)
                     .borderTextField(title: "Username")
+                    .textInputAutocapitalization(.never)
             }
             .animation(.default)
             if textFieldState == .invalid {

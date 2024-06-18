@@ -58,8 +58,10 @@ final class LoginViewModel: ObservableObject {
                 }
             } receiveValue: { [weak self] response in
                 guard let self = self else { return }
-                self.keychainService.setAccessToken(response.userToken?.accessToken ?? "")
-                UserDefaults.setAssignee(with: response.user?.userId ?? "")
+//                self.keychainService.setAccessToken(response.userToken?.accessToken ?? "")
+                self.keychainService.setAccessToken(response.data.userToken.accessToken)
+                
+                UserDefaults.setAssignee(with: response.data.user.userID)
             }
             .store(in: &cancellables)
     }

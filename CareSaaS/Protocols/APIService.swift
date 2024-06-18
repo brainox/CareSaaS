@@ -12,7 +12,7 @@ protocol APIService {
     
     // MARK: - Properties
     
-    func signIn(userName: String, password: String) -> AnyPublisher<LoginResponse, APIError>
+    func signIn(userName: String, password: String) -> AnyPublisher<LoginResult, APIError>
     
-    func getAllTasks(assignee: String) -> AnyPublisher<[Tasks], APIError>
+    func getAllTasks(assignee: String) -> AnyPublisher<TaskResult, APIError>
 }

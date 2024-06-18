@@ -2,14 +2,18 @@
 //  Assignee.swift
 //  CareSaaS
 //
-//  Created by Obinna on 17/06/2024.
+//  Created by Obinna on 18/06/2024.
 //
 
 import Foundation
 
-// Model for Assignee
+// MARK: - Assignee
 struct Assignee: Codable {
-    let userId: Int?
-    let firstName: String?
-    let lastName: String?
+    let userID: Int
+    let firstName, lastName: String
+
+    enum CodingKeys: String, CodingKey {
+        case userID = "userId"
+        case firstName, lastName
+    }
 }

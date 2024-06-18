@@ -12,11 +12,11 @@ final class APIClient: APIService {
     
     // MARK: - Protocol Conformance
     
-    func signIn(userName: String, password: String) -> AnyPublisher<LoginResponse, APIError> {
+    func signIn(userName: String, password: String) -> AnyPublisher<LoginResult, APIError> {
         request(.login(userName: userName, password: password))
     }
     
-    func getAllTasks(assignee: String) -> AnyPublisher<[Tasks], APIError> {
+    func getAllTasks(assignee: String) -> AnyPublisher<TaskResult, APIError> {
         request(.tasks(queryParams: [Environment.assignee: assignee]))
     }
 }

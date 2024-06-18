@@ -42,13 +42,6 @@
 		9BADAA7D2C1F367500250B7C /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA7C2C1F367500250B7C /* ListCellView.swift */; };
 		9BADAA812C1F3EBE00250B7C /* ImageTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA802C1F3EBE00250B7C /* ImageTextView.swift */; };
 		9BADAA832C1F7C6600250B7C /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA822C1F7C6600250B7C /* LoginRequest.swift */; };
-		9BADAA852C1F7C7900250B7C /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA842C1F7C7900250B7C /* LoginResponse.swift */; };
-		9BADAA872C1F7C9000250B7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA862C1F7C9000250B7C /* User.swift */; };
-		9BADAA892C1F7C9A00250B7C /* RealmAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA882C1F7C9A00250B7C /* RealmAccess.swift */; };
-		9BADAA8B2C1F7CA400250B7C /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA8A2C1F7CA400250B7C /* UserToken.swift */; };
-		9BADAA8D2C1F7F4800250B7C /* Assignee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA8C2C1F7F4800250B7C /* Assignee.swift */; };
-		9BADAA8F2C1F7F5900250B7C /* TaskAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA8E2C1F7F5900250B7C /* TaskAssignment.swift */; };
-		9BADAA912C1F7F6100250B7C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BADAA902C1F7F6000250B7C /* Task.swift */; };
 		9BCE63112C20375600A7D45D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63102C20375600A7D45D /* APIError.swift */; };
 		9BCE63132C203C9400A7D45D /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63122C203C9400A7D45D /* Binding+Extensions.swift */; };
 		9BCE63162C20487F00A7D45D /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63152C20487F00A7D45D /* Environment.swift */; };
@@ -61,6 +54,15 @@
 		9BCE63282C20780C00A7D45D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63272C20780C00A7D45D /* APIService.swift */; };
 		9BCE632B2C207A3100A7D45D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE632A2C207A3100A7D45D /* APIClient.swift */; };
 		9BCE63322C20BE0800A7D45D /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63312C20BE0800A7D45D /* UserDefaults+Extensions.swift */; };
+		9BCE63392C21A6D800A7D45D /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63382C21A6D800A7D45D /* LoginResult.swift */; };
+		9BCE633B2C21AD9F00A7D45D /* TaskResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE633A2C21AD9F00A7D45D /* TaskResult.swift */; };
+		9BCE633D2C21BB4200A7D45D /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE633C2C21BB4200A7D45D /* LoginData.swift */; };
+		9BCE633F2C21BB8B00A7D45D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE633E2C21BB8B00A7D45D /* User.swift */; };
+		9BCE63412C21BB9800A7D45D /* RealmAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63402C21BB9800A7D45D /* RealmAccess.swift */; };
+		9BCE63432C21BBA100A7D45D /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63422C21BBA100A7D45D /* UserToken.swift */; };
+		9BCE63452C21BBB100A7D45D /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63442C21BBB100A7D45D /* Tasks.swift */; };
+		9BCE63472C21BBBF00A7D45D /* TaskAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63462C21BBBF00A7D45D /* TaskAssignment.swift */; };
+		9BCE63492C21BBCF00A7D45D /* Assignee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCE63482C21BBCF00A7D45D /* Assignee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,13 +106,6 @@
 		9BADAA7C2C1F367500250B7C /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
 		9BADAA802C1F3EBE00250B7C /* ImageTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextView.swift; sourceTree = "<group>"; };
 		9BADAA822C1F7C6600250B7C /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
-		9BADAA842C1F7C7900250B7C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		9BADAA862C1F7C9000250B7C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		9BADAA882C1F7C9A00250B7C /* RealmAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAccess.swift; sourceTree = "<group>"; };
-		9BADAA8A2C1F7CA400250B7C /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
-		9BADAA8C2C1F7F4800250B7C /* Assignee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignee.swift; sourceTree = "<group>"; };
-		9BADAA8E2C1F7F5900250B7C /* TaskAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAssignment.swift; sourceTree = "<group>"; };
-		9BADAA902C1F7F6000250B7C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		9BCE63102C20375600A7D45D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		9BCE63122C203C9400A7D45D /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
 		9BCE63152C20487F00A7D45D /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -122,6 +117,15 @@
 		9BCE63272C20780C00A7D45D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		9BCE632A2C207A3100A7D45D /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9BCE63312C20BE0800A7D45D /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		9BCE63382C21A6D800A7D45D /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
+		9BCE633A2C21AD9F00A7D45D /* TaskResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskResult.swift; sourceTree = "<group>"; };
+		9BCE633C2C21BB4200A7D45D /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		9BCE633E2C21BB8B00A7D45D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9BCE63402C21BB9800A7D45D /* RealmAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAccess.swift; sourceTree = "<group>"; };
+		9BCE63422C21BBA100A7D45D /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
+		9BCE63442C21BBB100A7D45D /* Tasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		9BCE63462C21BBBF00A7D45D /* TaskAssignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAssignment.swift; sourceTree = "<group>"; };
+		9BCE63482C21BBCF00A7D45D /* Assignee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -486,10 +490,11 @@
 		9BCE632C2C20B17600A7D45D /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				9BADAA842C1F7C7900250B7C /* LoginResponse.swift */,
-				9BADAA862C1F7C9000250B7C /* User.swift */,
-				9BADAA882C1F7C9A00250B7C /* RealmAccess.swift */,
-				9BADAA8A2C1F7CA400250B7C /* UserToken.swift */,
+				9BCE63382C21A6D800A7D45D /* LoginResult.swift */,
+				9BCE633C2C21BB4200A7D45D /* LoginData.swift */,
+				9BCE633E2C21BB8B00A7D45D /* User.swift */,
+				9BCE63402C21BB9800A7D45D /* RealmAccess.swift */,
+				9BCE63422C21BBA100A7D45D /* UserToken.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -497,9 +502,10 @@
 		9BCE632D2C20B17F00A7D45D /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				9BADAA8C2C1F7F4800250B7C /* Assignee.swift */,
-				9BADAA8E2C1F7F5900250B7C /* TaskAssignment.swift */,
-				9BADAA902C1F7F6000250B7C /* Task.swift */,
+				9BCE633A2C21AD9F00A7D45D /* TaskResult.swift */,
+				9BCE63442C21BBB100A7D45D /* Tasks.swift */,
+				9BCE63462C21BBBF00A7D45D /* TaskAssignment.swift */,
+				9BCE63482C21BBCF00A7D45D /* Assignee.swift */,
 			);
 			path = Task;
 			sourceTree = "<group>";
@@ -591,26 +597,27 @@
 				9BADAA482C1DE00000250B7C /* AttributedString+Extensions.swift in Sources */,
 				9BCE63322C20BE0800A7D45D /* UserDefaults+Extensions.swift in Sources */,
 				9BADAA7B2C1F268300250B7C /* MedicationView.swift in Sources */,
-				9BADAA8B2C1F7CA400250B7C /* UserToken.swift in Sources */,
+				9BCE63492C21BBCF00A7D45D /* Assignee.swift in Sources */,
 				9BCE632B2C207A3100A7D45D /* APIClient.swift in Sources */,
 				9BADAA4E2C1DE6F700250B7C /* TextFieldState.swift in Sources */,
-				9BADAA8F2C1F7F5900250B7C /* TaskAssignment.swift in Sources */,
 				9BCE631D2C20507300A7D45D /* HTTPMethod.swift in Sources */,
 				9BADAA582C1E7DD000250B7C /* SecureInputField.swift in Sources */,
 				9BADAA5D2C1E7F0600250B7C /* HomeViewModel.swift in Sources */,
 				9BADAA7D2C1F367500250B7C /* ListCellView.swift in Sources */,
 				9BADAA602C1E7FF600250B7C /* MainView.swift in Sources */,
 				9BADAA732C1F24BD00250B7C /* SegmentControlSizePreferenceKey.swift in Sources */,
+				9BCE63412C21BB9800A7D45D /* RealmAccess.swift in Sources */,
 				9BCE63252C205D4000A7D45D /* KeychainService.swift in Sources */,
+				9BCE63452C21BBB100A7D45D /* Tasks.swift in Sources */,
 				9BADAA3F2C1D605B00250B7C /* Font+Extensions.swift in Sources */,
 				9BADAA462C1DA9EF00250B7C /* View+TextStyle.swift in Sources */,
 				9BADAA062C1CDD4700250B7C /* RootView.swift in Sources */,
 				9BADAA662C1E816300250B7C /* AccountView.swift in Sources */,
 				9BADAA2C2C1CFF5700250B7C /* TextTheme+CareSaaS.swift in Sources */,
-				9BADAA872C1F7C9000250B7C /* User.swift in Sources */,
 				9BADAA412C1DA4D200250B7C /* LoginView.swift in Sources */,
-				9BADAA8D2C1F7F4800250B7C /* Assignee.swift in Sources */,
 				9BADAA642C1E813500250B7C /* SearchView.swift in Sources */,
+				9BCE633B2C21AD9F00A7D45D /* TaskResult.swift in Sources */,
+				9BCE633F2C21BB8B00A7D45D /* User.swift in Sources */,
 				9BADAA042C1CDD4700250B7C /* CareSaaSApp.swift in Sources */,
 				9BADAA3D2C1D5EC000250B7C /* AppFonts.swift in Sources */,
 				9BADAA812C1F3EBE00250B7C /* ImageTextView.swift in Sources */,
@@ -622,19 +629,20 @@
 				9BADAA712C1F24B400250B7C /* BackgroundGeometryReader.swift in Sources */,
 				9BADAA752C1F251600250B7C /* SegmentControlView.swift in Sources */,
 				9BADAA6C2C1E8DB500250B7C /* SegmentedButtonView.swift in Sources */,
+				9BCE63392C21A6D800A7D45D /* LoginResult.swift in Sources */,
 				9BCE63162C20487F00A7D45D /* Environment.swift in Sources */,
+				9BCE633D2C21BB4200A7D45D /* LoginData.swift in Sources */,
 				9BADAA562C1E1D3E00250B7C /* InputField.swift in Sources */,
 				9BADAA442C1DA87700250B7C /* LoginViewModel.swift in Sources */,
 				9BADAA3A2C1D0E8E00250B7C /* FontSize.swift in Sources */,
-				9BADAA912C1F7F6100250B7C /* Task.swift in Sources */,
 				9BADAA502C1DE73700250B7C /* View+Extensions.swift in Sources */,
 				9BADAA692C1E8D3700250B7C /* CustomButton.swift in Sources */,
 				9BCE631B2C204E5700A7D45D /* typealiases.swift in Sources */,
+				9BCE63472C21BBBF00A7D45D /* TaskAssignment.swift in Sources */,
+				9BCE63432C21BBA100A7D45D /* UserToken.swift in Sources */,
 				9BCE63132C203C9400A7D45D /* Binding+Extensions.swift in Sources */,
-				9BADAA892C1F7C9A00250B7C /* RealmAccess.swift in Sources */,
 				9BADAA522C1DE79A00250B7C /* CheckboxToggleStyle.swift in Sources */,
 				9BADAA4C2C1DE6AF00250B7C /* BorderTextFieldModifier.swift in Sources */,
-				9BADAA852C1F7C7900250B7C /* LoginResponse.swift in Sources */,
 				9BADAA5B2C1E7EFC00250B7C /* HomeView.swift in Sources */,
 				9BCE63112C20375600A7D45D /* APIError.swift in Sources */,
 				9BCE631F2C20510100A7D45D /* URLRequest+Extentions.swift in Sources */,

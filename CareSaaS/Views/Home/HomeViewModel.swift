@@ -58,7 +58,7 @@ private extension HomeViewModel {
                 }
             } receiveValue: { [weak self] tasks in
                 guard let self = self else { return }
-                self.tasks = tasks
+                self.tasks = tasks.data
             }
             .store(in: &cancellables)
 

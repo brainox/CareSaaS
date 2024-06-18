@@ -28,6 +28,14 @@ final class HomeViewModel: ObservableObject {
         getTasks()
     }
     
+    // MARK: - Computed Properties
+    
+    var welcomeMessage: String {
+        let userName = UserDefaults.getDefaults(for: Environment.userName)
+        let message = "Hi, \(userName)"
+        return message
+    }
+    
     // MARK: - Public methods
     
     func toggleClockIn() {
@@ -46,7 +54,7 @@ private extension HomeViewModel {
     }
     
     func getTasks() {
-        let assignee = UserDefaults.getAssignee()
+        let assignee = UserDefaults.getDefaults(for: Environment.assignee)
         apiService.getAllTasks(assignee: assignee)
             .sink { [weak self] completion in
                 guard let self = self else { return }

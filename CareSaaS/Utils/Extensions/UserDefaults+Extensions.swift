@@ -8,11 +8,11 @@
 import Foundation
 
 extension UserDefaults {
-    static func setAssignee(with value: String) {
-        UserDefaults.standard.set(value, forKey: "assignee")
+    static func setDefaults(for key: String, with value: String) {
+        UserDefaults.standard.set(value, forKey: key)
     }
     
-    static func getAssignee() -> String {
-        return UserDefaults.standard.string(forKey: "assignee") ?? ""
+    static func getDefaults(for key: String) -> String {
+        return UserDefaults.standard.string(forKey: key) ?? ""
     }
 }

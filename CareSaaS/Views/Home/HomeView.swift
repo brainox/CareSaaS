@@ -39,7 +39,7 @@ struct HomeView: View {
     var topView: some View {
         HStack(alignment: .bottom) {
             VStack(alignment: .leading) {
-                Text("Hi, George!")
+                Text(viewModel.welcomeMessage)
                     .apply(theme: .labelPrimarySubTitle)
                 Text("Clock-in to begin your task")
                     .apply(theme: .bodyMediumSecondaryEmphasis)

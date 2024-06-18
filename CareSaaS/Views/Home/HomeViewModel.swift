@@ -10,8 +10,17 @@ import Combine
 
 final class HomeViewModel: ObservableObject {
     
+    // MARK: - Enum
+    
+    enum State: Equatable {
+        case empty
+        case loading
+        case loaded([Tasks])
+    }
+    
     // MARK: - Properties
     
+    @Published private(set) var state: State = .empty
     @Published var tasks: [Tasks] = []
     @Published var error: Error?
     @Published var clockedIn: Bool = false
@@ -54,6 +63,7 @@ private extension HomeViewModel {
     }
     
     func getTasks() {
+        self.state = .loading
         let assignee = UserDefaults.getDefaults(for: Environment.assignee)
         apiService.getAllTasks(assignee: assignee)
             .sink { [weak self] completion in
@@ -66,7 +76,12 @@ private extension HomeViewModel {
                 }
             } receiveValue: { [weak self] tasks in
                 guard let self = self else { return }
-                self.tasks = tasks.data
+                let response = tasks.data
+                if response.isEmpty {
+                    self.state = .empty
+                } else {
+                    self.state = .loaded(response)
+                }
             }
             .store(in: &cancellables)
 

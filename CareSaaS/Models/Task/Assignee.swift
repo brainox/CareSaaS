@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Assignee
-struct Assignee: Codable {
+struct Assignee: Codable, Equatable {
     let userID: Int
     let firstName, lastName: String
 

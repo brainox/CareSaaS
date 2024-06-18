@@ -14,10 +14,10 @@ struct HomeView: View {
     
     var body: some View {
         content
-        .padding()
-        .alert(viewModel.error?.localizedDescription ?? "Error", isPresented: Binding(value: $viewModel.error)) {
-            Button("OK"){}
-        }
+            .padding()
+            .alert(viewModel.error?.localizedDescription ?? "Error", isPresented: Binding(value: $viewModel.error)) {
+                Button("OK"){}
+            }
     }
     
     var content: some View {
@@ -26,14 +26,50 @@ struct HomeView: View {
             clockSection
             SegmentControlView(items: items, selection: $select)
                 .padding(.vertical, 24)
-            if select == 0 {
-                MedicationView(tasks: viewModel.tasks)
-               
-            } else {
-                ActivitiesView(tasks: viewModel.tasks)
+            switch viewModel.state {
+            case .empty:
+                Text("No Data")
+                    .apply(theme: .bodyMediumSolidEmphasis)
+            case .loading:
+                ProgressView()
+                    .progressViewStyle(.circular)
+            case .loaded(let array):
+                if select == 0 {
+                    medicationView
+                } else {
+                    activitiesView
+                }
             }
             Spacer()
         }
+    }
+    
+    var medicationView: some View {
+        List(viewModel.tasks, id: \.id) { task in
+            ListCellView(title: task.action ,
+                         assignee: task.taskAssignments.first?.assignee.firstName ?? "",
+                         door: task.workStatus ,
+                         bed: task.supportLevel ,
+                         time: task.timeOfDay )
+                .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets())
+        }
+        .listRowSpacing(15)
+        .listStyle(.plain)
+    }
+    
+    var activitiesView: some View {
+        List(viewModel.tasks, id: \.id) { task in
+            ListCellView(title: task.action ,
+                         assignee: task.taskAssignments.first?.assignee.firstName ?? "",
+                         door: task.workStatus ,
+                         bed: task.supportLevel ,
+                         time: task.timeOfDay )
+                .listRowSeparator(.hidden)
+                .listRowInsets(EdgeInsets())
+        }
+        .listRowSpacing(15)
+        .listStyle(.plain)
     }
     
     var topView: some View {
@@ -52,11 +88,11 @@ struct HomeView: View {
     
     @ViewBuilder
     var clockSection: some View {
-            if viewModel.clockedIn {
-                clockOutSection
-            } else {
-                clockInButton
-            }
+        if viewModel.clockedIn {
+            clockOutSection
+        } else {
+            clockInButton
+        }
     }
     
     var clockInButton: some View {

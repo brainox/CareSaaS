@@ -40,9 +40,11 @@ struct SecureInputField: View {
                         .borderTextField(title: "Username", isSecureField: true, isShowingPassword: $isShowingPassword)
                         .disableAutocorrection(true)
                         .autocapitalization(.none)
+                        .textInputAutocapitalization(.never)
                 } else {
                     TextField("", text: $text)
                         .borderTextField(title: "Username", isSecureField: true, isShowingPassword: $isShowingPassword)
+                        .textInputAutocapitalization(.never)
                 }
             }
             .animation(.default)

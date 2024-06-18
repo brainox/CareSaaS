@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Tasks
-struct Tasks: Codable, Identifiable {
+struct Tasks: Codable, Identifiable, Equatable {
     var id: Int {
         userID
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - TaskAssignment
-struct TaskAssignment: Codable {
+struct TaskAssignment: Codable, Equatable {
     let assignee: Assignee
     let assignmentStatus: String
 }

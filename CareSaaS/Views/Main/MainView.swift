@@ -21,7 +21,7 @@ struct MainView: View {
                 }
             AccountView()
                 .tabItem {
-                    Label("Account", systemImage: "person")
+                    Label("Account", systemImage: "person.circle.fill")
                 }
         }
     }

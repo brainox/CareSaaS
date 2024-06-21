@@ -38,7 +38,6 @@ struct InputField: View {
                     .scaleEffect(text.isEmpty ? 1 : 0.7, anchor: .leading)
                     .padding(.leading)
                 TextField("", text: $text)
-                    .frame(height: 60)
                     .borderTextField(title: "Username")
                     .textInputAutocapitalization(.never)
             }

@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    // MARK: - Properties
+    
     @StateObject var viewModel = HomeViewModel(apiService: APIClient(), keychainService: KeychainService())
     @State var select: Int = 0
     let items = ["Medication", "Activities"]
+    
+    // MARK: - View Conformance
     
     var body: some View {
         content

@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct CustomButton: View {
+    
+    // MARK: - Properties
+    
     var title: String
     var color: Color
     var action: (() -> Void)?
+    
+    // MARK: - View Conformance
     
     var body: some View {
         Button {

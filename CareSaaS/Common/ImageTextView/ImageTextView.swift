@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct ImageTextView: View {
+    
+    // MARK: - Properties
+    
     let image: String
     let text: String
+    
+    // MARK: - View Conformance
     
     var body: some View {
         HStack(spacing: 8) {

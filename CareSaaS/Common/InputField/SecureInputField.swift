@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SecureInputField: View {
+    
+    // MARK: - Properties
+    
     var title: String
     var validationText: String
     @Binding var textFieldState: TextFieldState
@@ -25,6 +28,8 @@ struct SecureInputField: View {
         self._text = text
         self._isShowingPassword = isShowingPassword
     }
+    
+    // MARK: - View Conformance
     
     var body: some View {
         VStack(alignment: .leading) {

@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct BackgroundGeometryReader: View {
-    public init() {}
+    
+    // MARK: - View Conformance
     
     public var body: some View {
         GeometryReader { geometry in

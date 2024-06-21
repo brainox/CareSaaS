@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct BorderTextFieldModifier: ViewModifier {
+    
+    // MARK: - Properties
+    
     let title: String
     let isSecureField: Bool
     @Binding var togglePassword: Bool
@@ -16,15 +19,21 @@ struct BorderTextFieldModifier: ViewModifier {
     var cornerRadius: CGFloat = 8
     var titleHorizontalSpacing: CGFloat = 5
     
+    // MARK: - Initialization
+    
     init(title: String, isSecureField: Bool = false, togglePassword: Binding<Bool> = .constant(false)) {
         self.title = title
         self.isSecureField = isSecureField
         self._togglePassword = togglePassword
     }
 
+    // MARK: - Public Computed Properties
+    
     var titleOffsetX: CGFloat {
         verticalSpacing + 40
     }
+    
+    // MARK: - View Conformance
     
     func body(content: Content) -> some View {
         HStack {

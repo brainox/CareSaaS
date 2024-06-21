@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct InputField: View {
+    
+    // MARK: - Properties
+    
     var title: String
     var validationText: String
     @Binding var textFieldState: TextFieldState
@@ -23,6 +26,8 @@ struct InputField: View {
         self._text = text
     }
     
+    // MARK: - View Conformance
+    
     var body: some View {
         VStack(alignment: .leading) {
             ZStack(alignment: .leading) {
@@ -33,6 +38,7 @@ struct InputField: View {
                     .scaleEffect(text.isEmpty ? 1 : 0.7, anchor: .leading)
                     .padding(.leading)
                 TextField("", text: $text)
+                    .frame(height: 60)
                     .borderTextField(title: "Username")
                     .textInputAutocapitalization(.never)
             }

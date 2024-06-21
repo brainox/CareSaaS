@@ -9,12 +9,15 @@ import SwiftUI
 
 public struct SegmentControlView: View {
     
+    // MARK: - Properties
+    
     private let items: [String]
     @Binding private var selection: Int
     @State private var segmentSize: CGSize = .zero
     @State private var itemTitleSizes: [CGSize] = []
-    
     private let defaultXSpace: CGFloat?
+    
+    // MARK: - Initialization
     
     public init(
         items: [String],
@@ -26,6 +29,8 @@ public struct SegmentControlView: View {
         self.defaultXSpace = defaultXSpace
         self._itemTitleSizes = State(initialValue: [CGSize](repeating: .zero, count: items.count))
     }
+    
+    // MARK: - View Conformance
     
     public var body: some View {
         VStack(alignment: .center, spacing: 0) {

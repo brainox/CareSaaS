@@ -13,6 +13,8 @@ struct RootView: View {
     
     private let keychainService = KeychainService()
     
+    // MARK: - View Conformance
+    
     var body: some View {
         LoginView(viewModel: LoginViewModel(apiService: APIClient(), keychainService: keychainService))
     }

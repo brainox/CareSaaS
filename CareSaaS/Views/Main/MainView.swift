@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MainView: View {
     
+    // MARK: - View Conformance
+    
     var body: some View {
         TabView {
             HomeView()

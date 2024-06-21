@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SegmentControlSizePreferenceKey: PreferenceKey {
+    
     public typealias Value = CGSize
     public static var defaultValue: Value = .zero
     

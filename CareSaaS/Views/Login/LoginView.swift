@@ -13,7 +13,7 @@ struct LoginView: View {
     
     @ObservedObject var viewModel: LoginViewModel
     
-    // MARK: - View
+    // MARK: - View Conformance
     
     var body: some View {
         if viewModel.isSignedIn {
